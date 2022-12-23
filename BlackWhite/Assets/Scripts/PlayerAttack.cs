@@ -17,6 +17,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     private float boltForce, blastSize;
 
+    public float playerDamage;
+
     void Awake()
     {
         playerControls = new Controller();
@@ -55,8 +57,6 @@ public class PlayerAttack : MonoBehaviour
         GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
         Rigidbody rb = bolt.GetComponent<Rigidbody>();
         rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
-
-        player.gameObject.GetComponent<PlayerCondition>().UpdateHealth(1);
     }
 
     private void Secondary()

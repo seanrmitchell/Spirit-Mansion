@@ -16,6 +16,14 @@ public class PlayerCondition : MonoBehaviour
         health = maxHealth;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Attack")
+        {
+            UpdateHealth(other.gameObject.GetComponent<BoltFunction>().damage);
+        }
+    }
+
     public void UpdateHealth(float mod)
     {
         health -= mod;

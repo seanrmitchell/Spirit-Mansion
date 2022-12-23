@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFunction : MonoBehaviour
+public class MeleeEnemy : MonoBehaviour
 {
     [SerializeField]
     private float damage, speed;
@@ -28,7 +28,7 @@ public class EnemyFunction : MonoBehaviour
 
     private void Start()
     {
-        attackSpeed = attackCoolDown;
+        attackSpeed = 0f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,16 +42,16 @@ public class EnemyFunction : MonoBehaviour
 
         if (other.gameObject.tag == "Player Attack")
         {
-            //other.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
-            //attackSpeed = 0f;
-            Destroy(gameObject);
+            gameObject.GetComponent<EnemyHealth>().UpdateHealth(other.GetComponent<BoltFunction>().damage);
         }
     }
 
     void Update()
     {
         float step = speed * Time.deltaTime;
+        transform.LookAt(target.position);
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        
 
         if (attackSpeed < attackCoolDown)
         {
