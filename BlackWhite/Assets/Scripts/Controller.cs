@@ -105,6 +105,54 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""Attack"",
+            ""id"": ""a1c7b17a-688e-4d60-8a31-441ba66f6d30"",
+            ""actions"": [
+                {
+                    ""name"": ""Primary"",
+                    ""type"": ""Button"",
+                    ""id"": ""e8847530-1660-46b4-a8b9-47fa8b7e46d5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Secondary"",
+                    ""type"": ""Button"",
+                    ""id"": ""0ceb6f21-632f-4fb7-9673-80c2506b52ac"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""cb5190dc-9517-4df7-8705-1ed3105c4387"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Primary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""61b4625f-3ee6-4a16-a514-648255c721e1"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Secondary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -112,6 +160,10 @@ public partial class @Controller : IInputActionCollection2, IDisposable
         // Movement
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
         m_Movement_WASD = m_Movement.FindAction("WASD", throwIfNotFound: true);
+        // Attack
+        m_Attack = asset.FindActionMap("Attack", throwIfNotFound: true);
+        m_Attack_Primary = m_Attack.FindAction("Primary", throwIfNotFound: true);
+        m_Attack_Secondary = m_Attack.FindAction("Secondary", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -200,8 +252,54 @@ public partial class @Controller : IInputActionCollection2, IDisposable
         }
     }
     public MovementActions @Movement => new MovementActions(this);
+
+    // Attack
+    private readonly InputActionMap m_Attack;
+    private IAttackActions m_AttackActionsCallbackInterface;
+    private readonly InputAction m_Attack_Primary;
+    private readonly InputAction m_Attack_Secondary;
+    public struct AttackActions
+    {
+        private @Controller m_Wrapper;
+        public AttackActions(@Controller wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Primary => m_Wrapper.m_Attack_Primary;
+        public InputAction @Secondary => m_Wrapper.m_Attack_Secondary;
+        public InputActionMap Get() { return m_Wrapper.m_Attack; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(AttackActions set) { return set.Get(); }
+        public void SetCallbacks(IAttackActions instance)
+        {
+            if (m_Wrapper.m_AttackActionsCallbackInterface != null)
+            {
+                @Primary.started -= m_Wrapper.m_AttackActionsCallbackInterface.OnPrimary;
+                @Primary.performed -= m_Wrapper.m_AttackActionsCallbackInterface.OnPrimary;
+                @Primary.canceled -= m_Wrapper.m_AttackActionsCallbackInterface.OnPrimary;
+                @Secondary.started -= m_Wrapper.m_AttackActionsCallbackInterface.OnSecondary;
+                @Secondary.performed -= m_Wrapper.m_AttackActionsCallbackInterface.OnSecondary;
+                @Secondary.canceled -= m_Wrapper.m_AttackActionsCallbackInterface.OnSecondary;
+            }
+            m_Wrapper.m_AttackActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Primary.started += instance.OnPrimary;
+                @Primary.performed += instance.OnPrimary;
+                @Primary.canceled += instance.OnPrimary;
+                @Secondary.started += instance.OnSecondary;
+                @Secondary.performed += instance.OnSecondary;
+                @Secondary.canceled += instance.OnSecondary;
+            }
+        }
+    }
+    public AttackActions @Attack => new AttackActions(this);
     public interface IMovementActions
     {
         void OnWASD(InputAction.CallbackContext context);
+    }
+    public interface IAttackActions
+    {
+        void OnPrimary(InputAction.CallbackContext context);
+        void OnSecondary(InputAction.CallbackContext context);
     }
 }

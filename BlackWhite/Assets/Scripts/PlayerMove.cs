@@ -36,8 +36,8 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
 
-
         // Player Looks at Mouse
+
         mousePos = Mouse.current.position.ReadValue();
         Ray ray = Camera.main.ScreenPointToRay(mousePos);
         Plane ground = new Plane(Vector3.up, Vector3.zero);
@@ -56,12 +56,12 @@ public class PlayerMove : MonoBehaviour
         movement = playerControls.ReadValue<Vector2>();
         direction = new Vector3(movement.x, 0f, movement.y).normalized;
 
+        // Primary and Secondary Attacks
+
     }
 
     private void FixedUpdate()
     {
-        
-        // calculates movement on ground
         if (direction.magnitude >= 0.1f)
         {
             // Makes dude move
