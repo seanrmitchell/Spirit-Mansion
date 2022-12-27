@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MeleeEnemy : MonoBehaviour
 {
+    public NavMeshAgent enemy;
+
+    public bool PlayerInArea;
+
     [SerializeField]
-    private float damage, speed;
+    private float damage, lookRadius;
 
     private float attackSpeed;
 
@@ -45,9 +50,18 @@ public class MeleeEnemy : MonoBehaviour
 
     void Update()
     {
-        float step = speed * Time.deltaTime;
-        transform.LookAt(target.position);
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        if (distance <= lookRadius)
+        {
+            enemy.SetDestination(target.position);
+
+            if(distance <= enemy.stoppingDistance)
+            {
+                FacePlayer();
+            }
+            
+        }
         
 
         if (attackSpeed < attackCoolDown)
@@ -55,7 +69,21 @@ public class MeleeEnemy : MonoBehaviour
             attackSpeed += Time.deltaTime;
         }
 
+        
+
 
     }
 
+    void OnGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+    void FacePlayer()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRot = Quaternion.LookRotation(new Vector3(target.position.x, 0f, target.position.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 5f);
+    }
 }

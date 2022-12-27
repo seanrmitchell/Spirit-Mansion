@@ -7,6 +7,8 @@ public class PlayerMove : MonoBehaviour
 {
     public InputAction playerControls;
 
+    public Camera cam;
+
     [SerializeField] //visible in editor
     private float speed;
 
@@ -39,7 +41,7 @@ public class PlayerMove : MonoBehaviour
         // Player Looks at Mouse
 
         mousePos = Mouse.current.position.ReadValue();
-        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+        Ray ray = cam.ScreenPointToRay(mousePos);
         Plane ground = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
 
