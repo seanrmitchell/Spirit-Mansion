@@ -15,13 +15,11 @@ public class EnemyUniversal : MonoBehaviour
     [SerializeField]
     private float attackCoolDown;
 
-    [SerializeField]
-    private Rigidbody player;
     private Transform target;
 
     void Awake()
     {
-        target = player.transform;
+        target = GameObject.Find("Player").transform;
     }
 
     private void Start()
@@ -48,7 +46,7 @@ public class EnemyUniversal : MonoBehaviour
     void Update()
     {
         float step = speed * Time.deltaTime;
-        transform.LookAt(target.position);
+        transform.LookAt(new Vector3(target.position.x, 0f, target.position.z));
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
         if (attackSpeed >= attackCoolDown)

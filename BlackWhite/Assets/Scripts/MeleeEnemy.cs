@@ -15,15 +15,12 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField]
     private LayerMask playerLayer;
 
-    [SerializeField]
-    private Rigidbody player;
-
     private Transform target;
 
 
     void Awake()
     {
-        target = player.transform;
+        target = GameObject.Find("Player").transform;
     }
 
     private void Start()
