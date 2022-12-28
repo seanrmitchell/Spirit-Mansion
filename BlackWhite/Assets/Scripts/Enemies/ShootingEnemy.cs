@@ -8,7 +8,7 @@ public class ShootingEnemy : MonoBehaviour
     public Transform firePos;
         
     [SerializeField]
-    private float damage, speed, boltForce;
+    private float damage, lookRadius, boltForce;
 
     private float attackSpeed;
 
@@ -21,7 +21,7 @@ public class ShootingEnemy : MonoBehaviour
 
     void Awake()
     {
-        target = player.transform;
+        target = GameObject.Find("Player").transform;
     }
 
     private void Start()
@@ -46,20 +46,31 @@ public class ShootingEnemy : MonoBehaviour
 
     void Update()
     {
-        float step = speed * Time.deltaTime;
-        transform.LookAt(target.position);
+        float distance = Vector3.Distance(target.position, transform.position);
 
-        if (attackSpeed >= attackCoolDown)
+        transform.position = transform.position;
+
+        if (distance <= lookRadius)
         {
-            GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
-            Rigidbody rb = bolt.GetComponent<Rigidbody>();
-            rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
-            attackSpeed = 0f;
+            transform.LookAt(target.position);
+
+            if (attackSpeed >= attackCoolDown)
+            {
+                GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
+                Rigidbody rb = bolt.GetComponent<Rigidbody>();
+                rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
+                attackSpeed = 0f;
+            }
+            else if (attackSpeed < attackCoolDown)
+            {
+                attackSpeed += Time.deltaTime;
+            }
+
         }
-        else if (attackSpeed < attackCoolDown)
-        {
-            attackSpeed += Time.deltaTime;
-        }
+
+        
+
+
 
 
     }

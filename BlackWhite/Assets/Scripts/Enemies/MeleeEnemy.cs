@@ -7,8 +7,6 @@ public class MeleeEnemy : MonoBehaviour
 {
     public NavMeshAgent enemy;
 
-    public bool PlayerInArea;
-
     [SerializeField]
     private float damage, lookRadius;
 
@@ -35,15 +33,16 @@ public class MeleeEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (attackSpeed >= attackCoolDown)
+        /*if (attackSpeed >= attackCoolDown)
             if (other.gameObject.tag == "Player")
             {
                 other.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
                 attackSpeed = 0f;
-            }
+            }*/
 
         if (other.gameObject.tag == "Player Attack")
         {
+            Debug.Log("Hit!");
             gameObject.GetComponent<EnemyHealth>().UpdateHealth(other.GetComponent<BoltFunction>().damage);
         }
     }
@@ -68,9 +67,6 @@ public class MeleeEnemy : MonoBehaviour
         {
             attackSpeed += Time.deltaTime;
         }
-
-        
-
 
     }
 
