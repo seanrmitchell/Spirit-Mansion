@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerCondition : MonoBehaviour
 {
+    public GameOver gameOver;
+
     [SerializeReference]
     private float health = 0f;
     [SerializeField]
@@ -51,9 +53,11 @@ public class PlayerCondition : MonoBehaviour
         if (health > maxHealth)
         {
             health = maxHealth;
+
         } else if (health <= 0)
         {
             health = 0f;
+            gameOver.DetermineGameOver();
         }
     }
 

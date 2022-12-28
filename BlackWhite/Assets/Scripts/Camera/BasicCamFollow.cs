@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class BasicCamFollow : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    [SerializeField] Transform player;
+
     [SerializeField] Vector3 offset;
-    void Update()
+
+    void FixedUpdate()
     {
-        transform.position = player.transform.position+offset;
+        transform.position = player.position + offset;
+
+        
     }
 }
