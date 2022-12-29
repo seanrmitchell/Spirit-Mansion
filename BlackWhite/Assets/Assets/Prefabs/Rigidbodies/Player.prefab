@@ -553,6 +553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73dc3be6ab9bb5a4b8c21545ee978298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 5686114461463556402, guid: dbe09decdb62ce64da1a8f0c6b6eb1a5, type: 3}
   health: 0
   maxHealth: 3
   damageCooldown: 2
