@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Generator : MonoBehaviour
 {
+    public bool destroyed;
+
     [SerializeField] private MeshFilter current;
     [SerializeField] private Mesh desired;
 

@@ -12,8 +12,6 @@ public class PlayerCondition : MonoBehaviour
     private float health = 0f;
     [SerializeField]
     private float maxHealth = 3f;
-    [SerializeField]
-    private float damageCooldown;
 
     [SerializeField]
     private GameObject healthbarUI;
@@ -30,20 +28,7 @@ public class PlayerCondition : MonoBehaviour
         slider.value = CalculateHealth();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Attack" )
-        {
-            UpdateHealth(other.gameObject.GetComponent<BoltFunction>().damage);
-        }
-        else if (other.gameObject.tag == "Enemy" && !meleeCooldown)
-        {
-            Debug.Log("Melee Damage Cooldown!");
-            UpdateHealth(1);
-            meleeCooldown = true;
-            StartCoroutine(Cooldown(damageCooldown));
-        }
-    }
+
 
     public void UpdateHealth(float mod)
     {
@@ -64,14 +49,5 @@ public class PlayerCondition : MonoBehaviour
     private float CalculateHealth()
     {
         return health / maxHealth;
-    }
-
-    private IEnumerator Cooldown(float waitTime)
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(waitTime);
-            meleeCooldown = false;
-        }
     }
 }

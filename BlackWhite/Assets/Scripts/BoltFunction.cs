@@ -9,7 +9,12 @@ public class BoltFunction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-           Destroy(gameObject);
+        if (other.gameObject.tag == "Player")
+            other.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
+        else if (other.gameObject.tag == "Enemy")
+            other.gameObject.GetComponent<EnemyHealth>().UpdateHealth(damage);
+
+        Destroy(gameObject);
     }
 
 }

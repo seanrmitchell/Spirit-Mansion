@@ -13,10 +13,13 @@ public class MeleeEnemy : MonoBehaviour
     private float attackSpeed;
 
     [SerializeField]
-    private float attackCoolDown;
+    private float attackCoolDown, attackRange;
 
     [SerializeField]
     private LayerMask playerLayer;
+
+    [SerializeField]
+    private Transform attackPoint;
 
     private Transform target;
 
@@ -31,21 +34,6 @@ public class MeleeEnemy : MonoBehaviour
         attackSpeed = 0f;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        /*if (attackSpeed >= attackCoolDown)
-            if (other.gameObject.tag == "Player")
-            {
-                other.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
-                attackSpeed = 0f;
-            }*/
-
-        if (other.gameObject.tag == "Player Attack")
-        {
-            Debug.Log("Hit!");
-            gameObject.GetComponent<EnemyHealth>().UpdateHealth(other.GetComponent<BoltFunction>().damage);
-        }
-    }
 
     void Update()
     {
@@ -61,7 +49,19 @@ public class MeleeEnemy : MonoBehaviour
             }
             
         }
-        
+
+        Collider[] hitPlayer = Physics.OverlapSphere(attackPoint.position, attackRange, playerLayer);
+
+        foreach (Collider player in hitPlayer)
+        {
+            if (attackSpeed >= attackCoolDown)
+            {
+                Debug.Log("Player Hit!");
+                player.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
+                attackSpeed = 0f;
+            }
+
+        }
 
         if (attackSpeed < attackCoolDown)
         {

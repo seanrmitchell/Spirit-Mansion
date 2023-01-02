@@ -29,21 +29,6 @@ public class ShootingEnemy : MonoBehaviour
         attackSpeed = 0f;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        
-        if (other.gameObject.tag == "Player")
-        {
-            other.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
-            attackSpeed = 0f;
-        }
-
-        if (other.gameObject.tag == "Player Attack")
-        {
-            gameObject.GetComponent<EnemyHealth>().UpdateHealth(other.GetComponent<BoltFunction>().damage);
-        }
-    }
-
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
