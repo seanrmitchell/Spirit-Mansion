@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 6105964776341399804}
   - component: {fileID: 6105964776341399806}
   - component: {fileID: 6105964776341399807}
-  - component: {fileID: 6800094163249980981}
-  m_Layer: 0
-  m_Name: Capsule
+  m_Layer: 7
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6800094163249980981
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6105964776341399805}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.2117075, y: 1.3261497, z: 1.1702696}
-  m_Center: {x: 0, y: -0.05483468, z: 0.5841829}
 --- !u!1 &6105964776498800620
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6105964776498800623}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: firePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6105964776498800620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.435, y: 0.434, z: 1.185}
+  m_LocalPosition: {x: -0.02, y: 1.115, z: 1.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -137,7 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6105964776537064435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6105964777285938293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6105964778111728671}
   - component: {fileID: 6105964778111728668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +289,7 @@ GameObject:
   - component: {fileID: 6105964778111845136}
   - component: {fileID: 6105964778111845138}
   - component: {fileID: 6105964778111845139}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +366,7 @@ GameObject:
   - component: {fileID: 6105964778114127467}
   - component: {fileID: 6105964778114127464}
   - component: {fileID: 6105964778114127465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +466,7 @@ GameObject:
   - component: {fileID: 6105964778174696385}
   - component: {fileID: 6105964778174696387}
   - component: {fileID: 6105964778174696384}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,11 +541,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6105964778178513216}
   - component: {fileID: 6105964778178513230}
-  - component: {fileID: 6105964778178513231}
+  - component: {fileID: 6996707571210066041}
   - component: {fileID: 6105964778178513228}
-  m_Layer: 0
+  - component: {fileID: 4141434799790315879}
+  - component: {fileID: 6105964778178513231}
+  m_Layer: 7
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -572,7 +560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6105964778178513229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7491407, y: 2.331, z: 8.73669}
+  m_LocalPosition: {x: -5.7491407, y: 2.331, z: 8.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -602,7 +590,7 @@ MonoBehaviour:
   boltForce: 30
   attackCoolDown: 3
   player: {fileID: 0}
---- !u!114 &6105964778178513231
+--- !u!114 &6996707571210066041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -634,6 +622,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 94
   m_CollisionDetection: 0
+--- !u!65 &4141434799790315879
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105964778178513229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2117075, y: 1.3261497, z: 1.1702696}
+  m_Center: {x: 0, y: 0.77, z: 0}
+--- !u!114 &6105964778178513231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6105964778178513229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f2fd2f6d15d4245941c9de352ba83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 3
+  healthbarUI: {fileID: 6105964778114127511}
+  slider: {fileID: 6105964778111728668}
 --- !u!1001 &8448060210643652943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -644,6 +661,10 @@ PrefabInstance:
     - target: {fileID: 489930097507167885, guid: be4607df368308e4485d5849d3bc4f19, type: 3}
       propertyPath: m_Name
       value: Shadow
+      objectReference: {fileID: 0}
+    - target: {fileID: 489930097507167885, guid: be4607df368308e4485d5849d3bc4f19, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5401897392221626364, guid: be4607df368308e4485d5849d3bc4f19, type: 3}
       propertyPath: m_RootOrder

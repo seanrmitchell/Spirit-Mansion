@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4542a23ece203424183816eb36dcfdce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   current: {fileID: 4050713568791673861}
   desired: {fileID: 6505625290461016006, guid: 76aef4a1ff6e1a641beb4f7fb6358c6a, type: 3}
   health: 0
@@ -69,7 +70,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 94
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &4050713567482545814
 GameObject:

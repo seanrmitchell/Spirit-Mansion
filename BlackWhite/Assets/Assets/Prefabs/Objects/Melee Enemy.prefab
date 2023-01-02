@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 328252116199331549}
   - component: {fileID: 3623782079911707423}
   - component: {fileID: 6131618824521102484}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4437433692226496165}
   - component: {fileID: 299464001824423778}
   - component: {fileID: 5854556280070782182}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 8704604236877682105}
   - component: {fileID: 8132816238594583293}
   - component: {fileID: 1377401661997172164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5507784379682261274}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3851995306216280726}
   - component: {fileID: 5870020331537275915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7671147171647568290}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: blastPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7671147171700758766}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: firePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7671147171700758765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.37, y: -0.302, z: 0.996}
+  m_LocalPosition: {x: 0.37, y: 0.948, z: 0.521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 7671147173185933579}
   - component: {fileID: 7671147173185933581}
   - component: {fileID: 7671147173185933580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 7671147173324961748}
   - component: {fileID: 5584938836040964269}
   - component: {fileID: 4750131889277687991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Melee Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -598,9 +598,11 @@ MonoBehaviour:
   damage: 1
   lookRadius: 20
   attackCoolDown: 3
+  attackRange: 0
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  attackPoint: {fileID: 7671147171700758766}
 --- !u!114 &7671147173324961748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,7 +664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2725246599041850477}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
