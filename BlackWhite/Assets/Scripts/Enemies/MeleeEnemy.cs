@@ -35,12 +35,13 @@ public class MeleeEnemy : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
         if (distance <= lookRadius)
         {
+            enemy.isStopped = false;
             enemy.SetDestination(target.position);
 
             if(distance <= enemy.stoppingDistance)
@@ -48,6 +49,9 @@ public class MeleeEnemy : MonoBehaviour
                 FacePlayer();
             }
             
+        } else
+        {
+            enemy.isStopped = true;
         }
 
         Collider[] hitPlayer = Physics.OverlapSphere(attackPoint.position, attackRange, playerLayer);

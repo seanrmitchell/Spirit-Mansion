@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 7671147173324961744}
   - component: {fileID: 7671147173324961748}
   - component: {fileID: 5584938836040964269}
-  - component: {fileID: 4750131889277687991}
+  - component: {fileID: 73562344124586621}
   m_Layer: 7
   m_Name: Melee Enemy
   m_TagString: Enemy
@@ -555,7 +555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7671147173324961758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.86, y: 1.512, z: 0.16072136}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -628,7 +628,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7671147173324961758}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.4
+  m_Radius: 0.5
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -641,8 +641,8 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!136 &4750131889277687991
-CapsuleCollider:
+--- !u!65 &73562344124586621
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -651,10 +651,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.95, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.68, y: 1, z: 0.68}
+  m_Center: {x: 0, y: 1.06, z: 0}
 --- !u!1 &7859741402982864687
 GameObject:
   m_ObjectHideFlags: 0
