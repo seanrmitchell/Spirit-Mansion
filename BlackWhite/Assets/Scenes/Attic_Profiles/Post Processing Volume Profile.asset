@@ -124,7 +124,7 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 1
+    value: 0
   focusDistance:
     overrideState: 1
     value: 21
@@ -155,7 +155,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: -15
+    value: -30
   intensityX:
     overrideState: 0
     value: 1
@@ -188,14 +188,14 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   mode:
-    overrideState: 0
+    overrideState: 1
     value: 1
   intensity:
     overrideState: 1
-    value: 0.96
+    value: 1.66
   color:
-    overrideState: 0
-    value: {r: 0, g: 0, b: 0, a: 1}
+    overrideState: 1
+    value: {r: 0, g: 0.07385591, b: 0.3490566, a: 1}
   ambientOnly:
     overrideState: 0
     value: 1
