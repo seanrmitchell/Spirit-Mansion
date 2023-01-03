@@ -33,11 +33,9 @@ public class ShootingEnemy : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        transform.position = transform.position;
-
         if (distance <= lookRadius)
         {
-            transform.LookAt(target.position);
+            transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
 
             if (attackSpeed >= attackCoolDown)
             {
