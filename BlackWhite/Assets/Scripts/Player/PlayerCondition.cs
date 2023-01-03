@@ -19,8 +19,6 @@ public class PlayerCondition : MonoBehaviour
     [SerializeField]
     private Slider slider;
 
-    private bool meleeCooldown = false;
-
     // Start is called before the first frame update
     void Start()
     {
