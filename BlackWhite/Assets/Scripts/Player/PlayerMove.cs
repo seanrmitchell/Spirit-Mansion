@@ -7,6 +7,8 @@ public class PlayerMove : MonoBehaviour
 {
     public InputAction playerControls;
 
+    public CharacterController player;
+
     public Camera cam;
 
     [SerializeField] //visible in editor
@@ -32,6 +34,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        player = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -58,17 +61,17 @@ public class PlayerMove : MonoBehaviour
         movement = playerControls.ReadValue<Vector2>();
         direction = new Vector3(movement.x, 0f, movement.y).normalized;
 
-        // Primary and Secondary Attacks
+        // Makes dude move
+        //rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
+        //Vector3 move = transform.right * direction.x + transform.forward * direction.z;
+        player.Move(direction * speed * Time.deltaTime);
+        //rb.velocity = direction * speed * Time.deltaTime;
 
     }
 
     private void FixedUpdate()
     {
-        if (direction.magnitude >= 0.1f)
-        {
-            // Makes dude move
-            rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
-        }
+        
     }
 
     private void Attack(int x)
