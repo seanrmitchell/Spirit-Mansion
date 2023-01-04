@@ -7,6 +7,9 @@ public class Generator : MonoBehaviour
 {
     public bool destroyed;
 
+    public AudioSource sound;
+    public AudioSource death;
+
     [SerializeField] private MeshFilter current;
     [SerializeField] private Mesh desired;
 
@@ -24,9 +27,10 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player Attack")
+        if (other.gameObject.tag == "Player Attack" && !destroyed)
         {
             UpdateHealth(other.GetComponent<BoltFunction>().damage);
+            
         }
     }
 
@@ -49,6 +53,10 @@ public class Generator : MonoBehaviour
         else if (health <= 0)
         {
             current.mesh = desired;
+
+            sound.Stop();
+            death.Play();
+
             healthbarUI.SetActive(false);
         }
     }

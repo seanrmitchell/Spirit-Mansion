@@ -11,13 +11,18 @@ public class PlayerAttack : MonoBehaviour
 
     public GameObject boltPreFab, blastPreFab;
 
+    public float playerDamage;
+
     [SerializeField]
     private Rigidbody player;
 
     [SerializeField]
-    private float boltForce, blastSize;
+    private LayerMask enemyLayer;
 
-    public float playerDamage;
+    [SerializeField]
+    private float boltForce, blastSize, blastCoolDown, blastDamage;
+
+    private bool isBlasted = false;
 
     void Awake()
     {
@@ -62,14 +67,35 @@ public class PlayerAttack : MonoBehaviour
     private void Secondary()
     {
         Debug.Log("Secondary!");
-        StartCoroutine(Blast());
+
+        // Determines if enemy is hit by secondary
+        if (!isBlasted)
+        {
+            Collider[] hitEnemy = Physics.OverlapSphere(transform.position, blastSize, enemyLayer);
+
+            foreach (Collider enemy in hitEnemy)
+            {
+                Debug.Log("Enemy Hit!");
+                // Deals damage to enemies in sphere
+                enemy.GetComponent<EnemyHealth>().UpdateHealth(blastDamage);
+            }
+        }
+
+         isBlasted = true;
+         StartCoroutine(Blast());
     }
 
     IEnumerator Blast()
     {
-        GameObject blast = Instantiate(blastPreFab, blastPos.position, blastPos.rotation);
-        yield return new WaitForSeconds(blastSize);
-        Destroy(blast);
+        yield return new WaitForSeconds(blastCoolDown);
+            Debug.Log("Cooldown Finished!");
+            isBlasted = false;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, blastSize);
     }
 
 }

@@ -74,7 +74,7 @@ public class MeleeEnemy : MonoBehaviour
 
     }
 
-    void OnGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
