@@ -20,16 +20,16 @@ public class PlayerAttack : MonoBehaviour
     private LayerMask enemyLayer;
 
     [SerializeField]
-    private float boltForce, boltCooldownTime, boltMaxShot;
+    private float boltForce;
 
-    [SerializeReference]
-    private float boltShot;
+    //boltCooldownTime, boltMaxShot;
+    //private float boltShot;
 
     [SerializeField]
     private float blastSize, blastCoolDown, blastDamage;
 
     private bool isBlasted = false;
-    private bool boltRecharge = false;
+    private bool recharging = false;
 
 
     void Awake()
@@ -51,37 +51,31 @@ public class PlayerAttack : MonoBehaviour
     {
         player = gameObject.GetComponent<Rigidbody>();
 
-        boltShot = boltMaxShot;
+        // boltShot = boltMaxShot;
     }
 
     // Update is called once per frame
     void Update()
     {
         playerControls.Attack.Primary.performed += _ => Primary();
-        playerControls.Attack.Secondary.performed += _ => Secondary();
+        playerControls.Attack.Secondary.performed += _ => Secondary();  
     }
 
     void FixedUpdate()
     {
-        
+
     }
 
     private void Primary()
     {
         Debug.Log("Primary!");
 
-        if (boltShot > 0)
-        {
-            // Creates bolt object and sends a force based on direction player facing
-            GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
-            Rigidbody rb = bolt.GetComponent<Rigidbody>();
-            rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
-            boltShot--;
-        }
-        else if (!boltRecharge)
-        {
-            StartCoroutine(Bolt());
-        }
+   
+        // Creates bolt object and sends a force based on direction player facing
+        GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
+        Rigidbody rb = bolt.GetComponent<Rigidbody>();
+        rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
+            
     }
 
     private void Secondary()
@@ -98,12 +92,19 @@ public class PlayerAttack : MonoBehaviour
                 Debug.Log("Enemy Hit!");
 
                 // Deals damage to enemies in sphere
-                enemy.GetComponent<EnemyHealth>().UpdateHealth(blastDamage);
+                if (enemy.gameObject.tag == "Enemy")
+                    enemy.GetComponent<EnemyHealth>().UpdateHealth(blastDamage);
+                else if (enemy.gameObject.tag == "Generator")
+                    enemy.GetComponent<Generator>().UpdateHealth(blastDamage);
+                else if (enemy.gameObject.tag == "Boss")
+                    enemy.GetComponent<BossHealth>().UpdateHealth(blastDamage);
             }
+
+            isBlasted = true;
+            StartCoroutine(Blast());
         }
 
-         isBlasted = true;
-         StartCoroutine(Blast());
+         
     }
 
     IEnumerator Blast()
@@ -113,15 +114,16 @@ public class PlayerAttack : MonoBehaviour
             isBlasted = false;
     }
 
+    /*
     IEnumerator Bolt()
     {
-        boltRecharge = true;
-
+        Debug.Log("Recharging!");
         yield return new WaitForSeconds(boltCooldownTime);
-            boltRecharge = false;
             Debug.Log("Bolt Recharged!");
             boltShot = boltMaxShot;
+            recharging = false;
     }
+    */
 
     void OnDrawGizmosSelected()
     {
