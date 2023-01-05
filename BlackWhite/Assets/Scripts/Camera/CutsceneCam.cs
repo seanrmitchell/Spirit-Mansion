@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CutsceneCam : MonoBehaviour
 {
+
+    public GameObject player;
+
     [SerializeField]
     private Camera cam;
 
@@ -21,12 +24,12 @@ public class CutsceneCam : MonoBehaviour
     private void Awake()
     {
         cam.gameObject.SetActive(true);
+        player = GameObject.Find("Player");
     }
 
     private void Start()
     {
         cam.transform.position = start.position;
-
         StartCoroutine(Cutscene(waittime));
     }
 
@@ -41,7 +44,9 @@ public class CutsceneCam : MonoBehaviour
                 cam.fieldOfView++;
 
             if (cam.transform.position == Camera.main.transform.position)
+            {
                 cam.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -49,6 +54,7 @@ public class CutsceneCam : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(waittime);
             follow = true;
+            
     }
 
 

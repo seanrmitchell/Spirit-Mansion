@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MeleeEnemy : MonoBehaviour
+public class AtticBoss : MonoBehaviour
 {
     public NavMeshAgent enemy;
 
     [SerializeField]
-    private float damage, lookRadius;
+    private float damage, attackCoolDown, attackRange;
 
     private float attackSpeed;
 
-    [SerializeField]
-    private float attackCoolDown, attackRange;
+    private bool playerInSight = false;
 
     [SerializeField]
     private LayerMask playerLayer;
@@ -24,9 +23,11 @@ public class MeleeEnemy : MonoBehaviour
     private Transform target;
 
 
+
     void Awake()
     {
         target = GameObject.Find("Player").transform;
+        enemy.isStopped = true;
     }
 
     private void Start()
@@ -37,22 +38,15 @@ public class MeleeEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
+        //if (inside.)
+
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= lookRadius)
-        {
-            enemy.isStopped = false;
-            enemy.SetDestination(target.position);
+        enemy.SetDestination(target.position);
 
-            if(distance <= enemy.stoppingDistance)
-            {
-                FacePlayer();
-            }
-            
-        }
-        else
+        if (distance <= enemy.stoppingDistance)
         {
-            enemy.isStopped = true;
+            FacePlayer();
         }
 
         Collider[] hitPlayer = Physics.OverlapSphere(attackPoint.position, attackRange, playerLayer);
@@ -65,7 +59,6 @@ public class MeleeEnemy : MonoBehaviour
                 player.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
                 attackSpeed = 0f;
             }
-
         }
 
         if (attackSpeed < attackCoolDown)
@@ -78,7 +71,7 @@ public class MeleeEnemy : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, lookRadius);
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
     void FacePlayer()
