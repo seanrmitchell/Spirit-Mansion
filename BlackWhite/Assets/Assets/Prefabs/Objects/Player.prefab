@@ -761,9 +761,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   boltForce: 20
-  blastSize: 2.5
+  boltCooldownTime: 3
+  boltMaxShot: 10
+  blastSize: 3.5
   blastCoolDown: 3
   blastDamage: 1
+  boltShot: 0
 --- !u!114 &5292207245978705108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,7 +848,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5292207246107447047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.13}
+  m_LocalPosition: {x: 0, y: 0.36, z: 0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

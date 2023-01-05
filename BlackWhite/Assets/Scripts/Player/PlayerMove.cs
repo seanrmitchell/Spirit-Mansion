@@ -53,7 +53,7 @@ public class PlayerMove : MonoBehaviour
             Vector3 pointToLook = ray.GetPoint(rayLength);
             Debug.DrawLine(ray.origin, pointToLook, Color.blue);
 
-            transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+            transform.LookAt(new Vector3(pointToLook.x * Time.timeScale, transform.position.y, pointToLook.z * Time.timeScale));
         }
 
         // Gets horizontal input

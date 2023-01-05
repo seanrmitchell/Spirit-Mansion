@@ -12,8 +12,6 @@ public class AtticBoss : MonoBehaviour
 
     private float attackSpeed;
 
-    private bool playerInSight = false;
-
     [SerializeField]
     private LayerMask playerLayer;
 
@@ -71,7 +69,7 @@ public class AtticBoss : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     void FacePlayer()

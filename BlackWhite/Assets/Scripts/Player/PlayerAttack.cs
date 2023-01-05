@@ -20,9 +20,17 @@ public class PlayerAttack : MonoBehaviour
     private LayerMask enemyLayer;
 
     [SerializeField]
-    private float boltForce, blastSize, blastCoolDown, blastDamage;
+    private float boltForce, boltCooldownTime, boltMaxShot;
+
+    [SerializeReference]
+    private float boltShot;
+
+    [SerializeField]
+    private float blastSize, blastCoolDown, blastDamage;
 
     private bool isBlasted = false;
+    private bool boltRecharge = false;
+
 
     void Awake()
     {
@@ -42,6 +50,8 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         player = gameObject.GetComponent<Rigidbody>();
+
+        boltShot = boltMaxShot;
     }
 
     // Update is called once per frame
@@ -59,9 +69,19 @@ public class PlayerAttack : MonoBehaviour
     private void Primary()
     {
         Debug.Log("Primary!");
-        GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
-        Rigidbody rb = bolt.GetComponent<Rigidbody>();
-        rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
+
+        if (boltShot > 0)
+        {
+            // Creates bolt object and sends a force based on direction player facing
+            GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
+            Rigidbody rb = bolt.GetComponent<Rigidbody>();
+            rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
+            boltShot--;
+        }
+        else if (!boltRecharge)
+        {
+            StartCoroutine(Bolt());
+        }
     }
 
     private void Secondary()
@@ -76,6 +96,7 @@ public class PlayerAttack : MonoBehaviour
             foreach (Collider enemy in hitEnemy)
             {
                 Debug.Log("Enemy Hit!");
+
                 // Deals damage to enemies in sphere
                 enemy.GetComponent<EnemyHealth>().UpdateHealth(blastDamage);
             }
@@ -92,10 +113,20 @@ public class PlayerAttack : MonoBehaviour
             isBlasted = false;
     }
 
+    IEnumerator Bolt()
+    {
+        boltRecharge = true;
+
+        yield return new WaitForSeconds(boltCooldownTime);
+            boltRecharge = false;
+            Debug.Log("Bolt Recharged!");
+            boltShot = boltMaxShot;
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, blastSize);
+        Gizmos.DrawWireSphere(blastPos.position, blastSize);
     }
 
 }

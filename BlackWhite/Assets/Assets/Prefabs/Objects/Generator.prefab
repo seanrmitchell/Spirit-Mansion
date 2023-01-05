@@ -185,7 +185,7 @@ MonoBehaviour:
   current: {fileID: 4050713568791673861}
   desired: {fileID: 6505625290461016006, guid: 76aef4a1ff6e1a641beb4f7fb6358c6a, type: 3}
   health: 0
-  maxHealth: 3
+  maxHealth: 5
   healthbarUI: {fileID: 4050713567718629318}
   slider: {fileID: 4050713567981423207}
 --- !u!54 &4050713566911551863
