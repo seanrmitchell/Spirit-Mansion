@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeReference]
     private MeshRenderer material;
 
     [SerializeReference]
@@ -22,6 +22,11 @@ public class EnemyHealth : MonoBehaviour
 
     private Color color;
     private Color damaged;
+
+    private void Awake()
+    {
+        material = gameObject.GetComponentInChildren<MeshRenderer>();
+    }
 
     private void Start()
     {

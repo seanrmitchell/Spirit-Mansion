@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CutsceneCam : MonoBehaviour
+public class AtticCam : MonoBehaviour
 {
 
     public GameObject player;
