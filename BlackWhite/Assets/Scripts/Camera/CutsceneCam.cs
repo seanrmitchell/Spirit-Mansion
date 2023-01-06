@@ -6,6 +6,7 @@ public class CutsceneCam : MonoBehaviour
 {
 
     public GameObject player;
+    public GameObject canvas;
 
     [SerializeField]
     private Camera cam;
@@ -23,7 +24,7 @@ public class CutsceneCam : MonoBehaviour
         cam.gameObject.SetActive(true);
         player = GameObject.Find("Player");
         player.GetComponent<PlayerMove>().enabled = false;
-        player.GetComponentInChildren<Canvas>().enabled = false;
+        canvas.SetActive(false);
     }
 
     private void Start()
@@ -46,7 +47,7 @@ public class CutsceneCam : MonoBehaviour
             if (cam.transform.position == Camera.main.transform.position)
             {
                 cam.gameObject.SetActive(false);
-                player.GetComponentInChildren<Canvas>().enabled = true;
+                canvas.SetActive(true);
                 player.GetComponent<PlayerMove>().enabled = true;
             }
         }
