@@ -1,21 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyUniversal : MonoBehaviour
 {
+    public NavMeshAgent enemy;
+
     public GameObject boltPreFab;
     public Transform firePos;
 
     [SerializeField]
-    private float damage, speed, boltForce;
+    private float meleeDamage, meleeCoolDown, meleeRange, rangedCoolDown, rangedDamage, lookRadius, boltForce;
 
-    private float attackSpeed;
+    private float meleeSpeed, rangedSpeed;
 
     [SerializeField]
-    private float attackCoolDown;
+    private LayerMask playerLayer;
+
+    [SerializeField]
+    private Transform attackPoint;
 
     private Transform target;
+
 
     void Awake()
     {
@@ -24,47 +31,82 @@ public class EnemyUniversal : MonoBehaviour
 
     private void Start()
     {
-        attackSpeed = 0f;
+        meleeSpeed = 0f;
+        rangedSpeed = 0f;
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    void FixedUpdate()
     {
 
-        if (attackSpeed >= attackCoolDown)
-            if (other.gameObject.tag == "Player")
+    }
+
+    private void Update()
+    {
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        if (distance <= lookRadius)
+        {
+            enemy.isStopped = false;
+            enemy.SetDestination(target.position);
+
+            if (distance <= enemy.stoppingDistance)
             {
-                other.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
-                attackSpeed = 0f;
+                FacePlayer();
             }
 
-        if (other.gameObject.tag == "Player Attack")
+        }
+        else
         {
-            gameObject.GetComponent<EnemyHealth>().UpdateHealth(other.GetComponent<BoltFunction>().damage);
+            enemy.isStopped = true;
+        }
+
+        Collider[] hitPlayer = Physics.OverlapSphere(attackPoint.position, meleeRange, playerLayer);
+
+        foreach (Collider player in hitPlayer)
+        {
+            if (meleeSpeed >= meleeCoolDown)
+            {
+                Debug.Log("Player Hit!");
+                player.gameObject.GetComponent<PlayerCondition>().UpdateHealth(meleeDamage);
+                meleeSpeed = 0f;
+            }
+
+        }
+
+        if (meleeSpeed < meleeCoolDown)
+        {
+            meleeSpeed += Time.deltaTime;
+        }
+
+        if (distance <= lookRadius)
+        {
+            if (rangedSpeed >= rangedCoolDown)
+            {
+                GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
+                bolt.GetComponent<EnemyBoltFunction>().damage = rangedDamage;
+                Rigidbody rb = bolt.GetComponent<Rigidbody>();
+                rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
+                rangedSpeed = 0f;
+            }
+        }
+
+        if (rangedSpeed < rangedCoolDown)
+        {
+            rangedSpeed += Time.deltaTime;
         }
     }
 
-    void Update()
+    void OnDrawGizmosSelected()
     {
-        float step = speed * Time.deltaTime;
-        transform.LookAt(new Vector3(target.position.x, 0f, target.position.z));
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-
-        if (attackSpeed >= attackCoolDown)
-        {
-            GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
-            Rigidbody rb = bolt.GetComponent<Rigidbody>();
-            rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
-            attackSpeed = 0f;
-        }
-        else if (attackSpeed < attackCoolDown)
-        {
-            attackSpeed += Time.deltaTime;
-        }
-
-
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
-
-
+    void FacePlayer()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRot = Quaternion.LookRotation(new Vector3(target.position.x, 0f, target.position.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 5f);
+    }
 }
-

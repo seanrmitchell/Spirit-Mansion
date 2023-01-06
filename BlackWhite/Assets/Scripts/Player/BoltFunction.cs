@@ -11,6 +11,8 @@ public class BoltFunction : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
             other.gameObject.GetComponent<EnemyHealth>().UpdateHealth(damage);
+        else if (other.gameObject.tag == "Boss")
+            other.gameObject.GetComponent<BossHealth>().UpdateHealth(damage);
 
         Destroy(gameObject);
     }
