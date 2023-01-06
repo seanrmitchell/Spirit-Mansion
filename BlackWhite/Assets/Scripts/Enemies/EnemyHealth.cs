@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField]
+    private MeshRenderer material;
+
     [SerializeReference]
     private float health = 0f;
 
@@ -17,14 +20,21 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     private Slider slider;
 
+    private Color color;
+    private Color damaged;
+
     private void Start()
     {
         health = maxHealth;
         slider.value = CalculateHealth();
+
+        color = material.material.color;
+        damaged = new Color(3.5f, 0.6f, 0.6f, 1f);
     }
 
     public void UpdateHealth(float mod)
     {
+        StartCoroutine(Hit());
         healthbarUI.SetActive(true);
         health -= mod;
         slider.value = CalculateHealth();
@@ -42,5 +52,13 @@ public class EnemyHealth : MonoBehaviour
     public float CalculateHealth()
     {
         return health / maxHealth;
+    }
+
+    IEnumerator Hit()
+    {
+        material.material.SetColor("_Color", damaged);
+        yield return new WaitForSeconds(0.25f);
+        material.material.SetColor("_Color", color);
+
     }
 }

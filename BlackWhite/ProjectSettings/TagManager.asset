@@ -8,6 +8,8 @@ TagManager:
   - Attack
   - Enemy
   - Boss
+  - Generator
+  - Bolt
   layers:
   - Default
   - TransparentFX

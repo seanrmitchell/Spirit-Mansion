@@ -11,6 +11,7 @@ public class EnemyBoltFunction : MonoBehaviour
         if (other.gameObject.tag == "Player")
             other.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
 
-        Destroy(gameObject);
+        if (!(other.gameObject.tag == "Bolt"))
+            Destroy(gameObject);
     }
 }

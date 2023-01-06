@@ -13,8 +13,12 @@ public class BoltFunction : MonoBehaviour
             other.gameObject.GetComponent<EnemyHealth>().UpdateHealth(damage);
         else if (other.gameObject.tag == "Boss")
             other.gameObject.GetComponent<BossHealth>().UpdateHealth(damage);
+        else if (other.gameObject.tag == "Generator")
+            other.gameObject.GetComponent<Generator>().UpdateHealth(damage);
 
-        Destroy(gameObject);
+
+        if (!(other.gameObject.tag == "Bolt"))
+            Destroy(gameObject);
     }
 
 }

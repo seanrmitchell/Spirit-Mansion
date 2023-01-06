@@ -20,8 +20,6 @@ public class AtticBoss : MonoBehaviour
 
     private Transform target;
 
-
-
     void Awake()
     {
         target = GameObject.Find("Player").transform;

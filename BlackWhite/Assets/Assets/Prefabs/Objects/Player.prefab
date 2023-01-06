@@ -624,13 +624,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5292207245978705119}
-  - component: {fileID: 5292207245978705113}
+  - component: {fileID: 8250610682878636573}
   - component: {fileID: 5292207245978705112}
   - component: {fileID: 5292207245978705115}
   - component: {fileID: 5292207245978705108}
-  - component: {fileID: 595990095}
   - component: {fileID: 7374349772233640999}
   - component: {fileID: 5105098485233429833}
+  - component: {fileID: 1965305346384918565}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -658,7 +658,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &5292207245978705113
+--- !u!54 &8250610682878636573
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -672,8 +672,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 1
+  m_Constraints: 96
+  m_CollisionDetection: 0
 --- !u!114 &5292207245978705112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,7 +738,7 @@ MonoBehaviour:
   player: {fileID: 5105098485233429833}
   cam: {fileID: 0}
   speed: 8
-  rb: {fileID: 5292207245978705113}
+  rb: {fileID: 0}
 --- !u!114 &5292207245978705115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,20 +781,7 @@ MonoBehaviour:
   maxHealth: 3
   healthbarUI: {fileID: 7444653212104482348}
   slider: {fileID: 2083835958843423389}
---- !u!136 &595990095
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5292207245978705118}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.45477116
-  m_Height: 2.0091963
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.06340626, z: -0.04522884}
+  material: {fileID: 5292207244910068682}
 --- !u!81 &7374349772233640999
 AudioListener:
   m_ObjectHideFlags: 0
@@ -820,6 +807,20 @@ CharacterController:
   m_StepOffset: 0.4
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &1965305346384918565
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5292207245978705118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5292207246107447047
 GameObject:

@@ -86,7 +86,7 @@ public class EnemyUniversal : MonoBehaviour
                 GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
                 bolt.GetComponent<EnemyBoltFunction>().damage = rangedDamage;
                 Rigidbody rb = bolt.GetComponent<Rigidbody>();
-                rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
+                rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse); 
                 rangedSpeed = 0f;
             }
         }
@@ -100,7 +100,7 @@ public class EnemyUniversal : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, lookRadius);
+        Gizmos.DrawWireSphere(attackPoint.position, meleeRange);
     }
 
     void FacePlayer()

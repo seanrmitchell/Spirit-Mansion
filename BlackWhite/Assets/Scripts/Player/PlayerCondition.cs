@@ -19,17 +19,32 @@ public class PlayerCondition : MonoBehaviour
     [SerializeField]
     private Slider slider;
 
+    [SerializeReference]
+    private MeshRenderer material;
+
+    private Color color;
+    private Color damaged;
+
+    private void Awake()
+    {
+        material = gameObject.GetComponentInChildren<MeshRenderer>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
         slider.value = CalculateHealth();
+
+        color = material.material.color;
+        damaged = new Color(5f, 0.6f, 0.6f, 1f);
     }
 
 
 
     public void UpdateHealth(float mod)
     {
+        StartCoroutine(Hit());
         health -= mod;
         slider.value = CalculateHealth();
 
@@ -47,5 +62,13 @@ public class PlayerCondition : MonoBehaviour
     private float CalculateHealth()
     {
         return health / maxHealth;
+    }
+
+    IEnumerator Hit()
+    {
+        material.material.SetColor("_Color", damaged);
+        yield return new WaitForSeconds(0.25f);
+        material.material.SetColor("_Color", color);
+
     }
 }
