@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class BossHealth : MonoBehaviour
 {
@@ -55,6 +56,10 @@ public class BossHealth : MonoBehaviour
         else if (health <= 0)
         {
             Debug.Log("Boss is Defeated!");
+            gameObject.GetComponent<AtticBoss>().enabled = false;
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            healthbarUI.SetActive(false);
+
             player.GetComponent<PlayerAttack>().enabled = false;
             player.GetComponent<CharacterController>().enabled = false;
             player.GetComponent<PlayerMove>().enabled = false;

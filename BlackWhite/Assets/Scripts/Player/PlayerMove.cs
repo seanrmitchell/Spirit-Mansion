@@ -59,7 +59,7 @@ public class PlayerMove : MonoBehaviour
         // Gets horizontal input
 
         movement = playerControls.ReadValue<Vector2>();
-        direction = new Vector3(movement.x, 0f, movement.y).normalized;
+        direction = new Vector3(movement.x, -0.25f , movement.y).normalized;
 
         // Makes dude move
         //rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
