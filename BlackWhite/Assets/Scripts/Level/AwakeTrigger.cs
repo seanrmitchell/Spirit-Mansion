@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class AwakeTrigger : MonoBehaviour
 {
 
-    public NavMeshAgent enemy;
+    public GameObject cutScene;
 
     [SerializeField]
     private BoxCollider box;
@@ -14,9 +14,18 @@ public class AwakeTrigger : MonoBehaviour
     [SerializeField]
     private GameObject bar;
 
+    private GameObject player;
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-
+        
+        
+        
     }
 
     private void OnTriggerStay(Collider other)
@@ -26,8 +35,11 @@ public class AwakeTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        enemy.isStopped = false;
-        bar.SetActive(true);
+        player.GetComponent<PlayerAttack>().enabled = false;
+        player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<PlayerMove>().enabled = false;
+        cutScene.SetActive(true);
+
         Debug.Log("Boss Battle Initiated!");
         box.isTrigger = false;
     }
