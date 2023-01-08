@@ -22,10 +22,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3
+    m_Start: 2
     m_ClipIn: 0
     m_Asset: {fileID: 3312961630706144828}
-    m_Duration: 4.033333333333333
+    m_Duration: 10.016666666666662
     m_TimeScale: 1
     m_ParentTrack: {fileID: -6750850252897638177}
     m_EaseInDuration: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 8.966666666666667
+  m_Time: 13.066666666666666
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 81f783681423f194eae81d6116012a5b, type: 2}
@@ -150,7 +150,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 3471257829355299313}
-    m_Duration: 7.033333333333333
+    m_Duration: 12.016666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: -2082285131089081055}
     m_EaseInDuration: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 4923265413566574656}
-    m_Duration: 7.033333333333333
+    m_Duration: 12.016666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4203319025553319614}
     m_EaseInDuration: 0
@@ -400,13 +400,13 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -6461117996383729793}
-    m_Duration: 8.966666666666667
+    m_Duration: 13.066666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4529883869304970434}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 1.9333333333333336
+    m_BlendOutDuration: 1.049999999999999
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -433,7 +433,25 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -448,19 +466,37 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Boss Battle
   - m_Version: 1
-    m_Start: 7.033333333333333
+    m_Start: 12.016666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -1239375426627657395}
-    m_Duration: 6.933333333333334
+    m_Duration: 7.9833333333333325
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4529883869304970434}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 1.9333333333333336
+    m_BlendInDuration: 1.049999999999999
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4

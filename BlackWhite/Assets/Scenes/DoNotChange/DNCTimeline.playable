@@ -187,7 +187,7 @@ MonoBehaviour:
     m_Start: 23.75
     m_ClipIn: 0
     m_Asset: {fileID: -296859982982236109}
-    m_Duration: 11.416666666666664
+    m_Duration: 6.333333333333332
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7770400847159166794}
     m_EaseInDuration: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 27.316666666666666
+  m_Time: 26.383333333333333
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 63582c848ed541447b90116729d7ad7a, type: 2}

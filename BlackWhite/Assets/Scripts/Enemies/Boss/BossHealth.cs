@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class BossHealth : MonoBehaviour
 {
-    public GameObject cutScene;
+    
 
     [SerializeReference]
     private float health = 0f;
@@ -26,12 +26,9 @@ public class BossHealth : MonoBehaviour
     private Color color;
     private Color damaged;
 
-    private GameObject player;
-
     private void Awake()
     {
         material = gameObject.GetComponentInChildren<MeshRenderer>();
-        player = GameObject.Find("Player");
     }
 
     private void Start()
@@ -56,14 +53,7 @@ public class BossHealth : MonoBehaviour
         else if (health <= 0)
         {
             Debug.Log("Boss is Defeated!");
-            gameObject.GetComponent<AtticBoss>().enabled = false;
-            gameObject.GetComponent<NavMeshAgent>().enabled = false;
             healthbarUI.SetActive(false);
-
-            player.GetComponent<PlayerAttack>().enabled = false;
-            player.GetComponent<CharacterController>().enabled = false;
-            player.GetComponent<PlayerMove>().enabled = false;
-            cutScene.SetActive(true);
         }
     }
 

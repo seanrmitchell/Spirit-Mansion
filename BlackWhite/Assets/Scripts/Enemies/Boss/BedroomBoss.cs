@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AtticBoss : MonoBehaviour
+public class BedroomBoss : MonoBehaviour
 {
     public NavMeshAgent enemy;
 
-    public GameObject cutScene;
+    public GameObject boltPreFab;
+    public Transform firePos;
 
     [SerializeField]
-    private float damage, attackCoolDown, attackRange;
+    private float meleeDamage, meleeCoolDown, meleeRange, rangedCoolDown, rangedDamage, lookRadius, boltForce;
 
-    private float attackSpeed;
+    private float meleeSpeed, rangedSpeed;
 
     [SerializeField]
     private LayerMask playerLayer;
@@ -25,12 +26,12 @@ public class AtticBoss : MonoBehaviour
     void Awake()
     {
         target = GameObject.Find("Player").transform;
-        enemy.isStopped = true;
+        enemy.isStopped = false;
     }
 
     private void Start()
     {
-        attackSpeed = 0f;
+        meleeSpeed = 0f;
     }
 
 
@@ -47,43 +48,62 @@ public class AtticBoss : MonoBehaviour
             FacePlayer();
         }
 
-        Collider[] hitPlayer = Physics.OverlapSphere(attackPoint.position, attackRange, playerLayer);
+        Collider[] hitPlayer = Physics.OverlapSphere(attackPoint.position, meleeRange, playerLayer);
 
         foreach (Collider player in hitPlayer)
         {
-            if (attackSpeed >= attackCoolDown)
+            if (meleeSpeed >= meleeCoolDown)
             {
                 Debug.Log("Player Hit!");
-                player.gameObject.GetComponent<PlayerCondition>().UpdateHealth(damage);
-                attackSpeed = 0f;
+                player.gameObject.GetComponent<PlayerCondition>().UpdateHealth(meleeDamage);
+                meleeSpeed = 0f;
             }
         }
 
-        if (attackSpeed < attackCoolDown)
+        if (meleeSpeed < meleeCoolDown)
         {
-            attackSpeed += Time.deltaTime;
+            meleeSpeed += Time.deltaTime;
         }
 
     }
 
     private void Update()
     {
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        if (distance <= lookRadius)
+        {
+            if (rangedSpeed >= rangedCoolDown)
+            {
+                GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
+                bolt.GetComponent<EnemyBoltFunction>().damage = rangedDamage;
+                Rigidbody rb = bolt.GetComponent<Rigidbody>();
+                rb.AddForce(firePos.forward * boltForce, ForceMode.Impulse);
+                rangedSpeed = 0f;
+            }
+        }
+
+        if (rangedSpeed < rangedCoolDown)
+        {
+            rangedSpeed += Time.deltaTime;
+        }
+
         if (gameObject.GetComponent<BossHealth>().CalculateHealth() <= 0)
         {
             target.GetComponent<PlayerAttack>().enabled = false;
             target.GetComponent<CharacterController>().enabled = false;
             target.GetComponent<PlayerMove>().enabled = false;
-            cutScene.SetActive(true);
+            //cutScene.SetActive(true);
 
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
-            gameObject.GetComponent<AtticBoss>().enabled = false;
+            gameObject.GetComponent<BedroomBoss>().enabled = false;
         }
     }
 
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, meleeRange);
     }
 
     void FacePlayer()
