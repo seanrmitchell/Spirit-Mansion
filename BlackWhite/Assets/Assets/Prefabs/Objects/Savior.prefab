@@ -86,6 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2459837154694492083}
+  cutScene: {fileID: 0}
   damage: 1
   attackCoolDown: 2
   attackRange: 1.34
@@ -109,6 +110,7 @@ MonoBehaviour:
   maxHealth: 10
   healthbarUI: {fileID: 2459837155525305989}
   slider: {fileID: 2459837156468641671}
+  material: {fileID: 0}
 --- !u!1 &2459837155243702488
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,9 +136,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2459837155243702488}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2459837155525305988}

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Attic.unity
+    guid: 919115f7835510744a3fbd0db150faa3
+  - enabled: 1
+    path: Assets/Scenes/Bedrooms.unity
+    guid: c609a2c8bd62117449df0325d4270b55
   m_configObjects: {}
