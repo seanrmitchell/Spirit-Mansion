@@ -1,5 +1,129 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &468178545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468178546}
+  m_Layer: 7
+  m_Name: firePos1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &468178546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468178545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.33, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7133540265564056867}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &772773540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772773541}
+  m_Layer: 7
+  m_Name: firePos3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &772773541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772773540}
+  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: -1.5, y: 1.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7133540265564056867}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+--- !u!1 &1022943124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1022943125}
+  m_Layer: 7
+  m_Name: meleePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1022943125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022943124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.33, z: 0.53}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7133540265564056867}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2056179901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056179902}
+  m_Layer: 7
+  m_Name: firePos2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2056179902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056179901}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 1.5, y: 1.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7133540265564056867}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1 &7133540265465617795
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,10 +160,10 @@ RectTransform:
   m_Father: {fileID: 7133540266219019567}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 606}
-  m_SizeDelta: {x: 450.3336, y: 23.0011}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -11.500549}
+  m_SizeDelta: {x: 450.3336, y: 23.001099}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7133540265465617793
 MonoBehaviour:
@@ -141,9 +265,10 @@ GameObject:
   - component: {fileID: 7133540265564056864}
   - component: {fileID: 7133540265564056865}
   - component: {fileID: 7133540265564056866}
-  m_Layer: 0
+  - component: {fileID: 1513405759}
+  m_Layer: 7
   m_Name: Knight
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,13 +280,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7133540265564056868}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -7.37, z: -5.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7133540266227903384}
   - {fileID: 7133540266219019567}
+  - {fileID: 468178546}
+  - {fileID: 2056179902}
+  - {fileID: 772773541}
+  - {fileID: 1022943125}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -175,11 +304,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.53
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 3000
+  m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -214,9 +343,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 35
-  healthbarUI: {fileID: 0}
-  slider: {fileID: 0}
+  healthbarUI: {fileID: 7133540266219019568}
+  slider: {fileID: 7133540265465617793}
   material: {fileID: 7133540266227903383}
+--- !u!114 &1513405759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7133540265564056868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1029245c984d514ebd1012049c39166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 7133540265564056864}
+  boltPreFab: {fileID: 7858409268150114526, guid: d14024b0bc9efb247a872f1c83d59c68, type: 3}
+  firePos:
+  - {fileID: 468178546}
+  - {fileID: 2056179902}
+  - {fileID: 772773541}
+  meleeDamage: 1
+  meleeCoolDown: 4
+  meleeRange: 1.5
+  rangedCoolDown: 2
+  rangedDamage: 1
+  lookRadius: 15
+  boltForce: 40
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  attackPoint: {fileID: 1022943125}
 --- !u!1 &7133540265805321798
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +563,7 @@ GameObject:
   - component: {fileID: 7133540266227903384}
   - component: {fileID: 7133540266227903382}
   - component: {fileID: 7133540266227903383}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
