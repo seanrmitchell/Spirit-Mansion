@@ -477,37 +477,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6556302937816458437, guid: 33e687ed8c7d23b4b8826f59ef735acb, type: 3}
   m_PrefabInstance: {fileID: 6556302938277139164}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &468178545
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 468178546}
-  m_Layer: 0
-  m_Name: firePos1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &468178546
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468178545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.33, z: 1.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 294008092}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &487277481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,37 +1043,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &772773540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 772773541}
-  m_Layer: 0
-  m_Name: firePos1 (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &772773541
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772773540}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 1.33, z: -0.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 294008092}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &839216490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,11 +1484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204657f4c74c7cd47b4d7181c3910a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1140892259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1879929728640786190, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
-  m_PrefabInstance: {fileID: 1879929729647394157}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1172333411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,37 +2252,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aef8caf3c238154da6b90c299156824, type: 3}
---- !u!1 &1721463945
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1721463946}
-  m_Layer: 0
-  m_Name: firePos1 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1721463946
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721463945}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.33, z: -1.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 294008092}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1722440386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6556302939914340382, guid: 33e687ed8c7d23b4b8826f59ef735acb, type: 3}
@@ -2441,17 +2343,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2459837154694492078, guid: 387e72bcadc453943bdf907e2d4d8f95, type: 3}
   m_PrefabInstance: {fileID: 2459837156759571491}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2007742013 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1879929727829904208, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
-  m_PrefabInstance: {fileID: 1879929729647394157}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2021720066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4050713566911551849, guid: 4aef8caf3c238154da6b90c299156824, type: 3}
@@ -2462,37 +2353,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4050713566911551861, guid: 4aef8caf3c238154da6b90c299156824, type: 3}
   m_PrefabInstance: {fileID: 1719600689}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2056179901
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2056179902}
-  m_Layer: 0
-  m_Name: firePos1 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2056179902
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056179901}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 1.33, z: -0.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 294008092}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2061748551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3889,14 +3749,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1433320721}
     m_Modifications:
-    - target: {fileID: 7133540265564056866, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
-      propertyPath: slider
-      value: 
-      objectReference: {fileID: 2007742013}
-    - target: {fileID: 7133540265564056866, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
-      propertyPath: healthbarUI
-      value: 
-      objectReference: {fileID: 1140892259}
     - target: {fileID: 7133540265564056867, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
       propertyPath: m_RootOrder
       value: 14
