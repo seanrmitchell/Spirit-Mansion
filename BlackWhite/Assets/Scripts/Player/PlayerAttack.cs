@@ -70,7 +70,6 @@ public class PlayerAttack : MonoBehaviour
     {
         Debug.Log("Primary!");
 
-
         // Creates bolt object and sends a force based on direction player facing
         GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
         Rigidbody rb = bolt.GetComponent<Rigidbody>();

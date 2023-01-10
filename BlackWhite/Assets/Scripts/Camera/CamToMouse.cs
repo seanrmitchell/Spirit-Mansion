@@ -36,8 +36,6 @@ public class CamToMouse : MonoBehaviour
 
             objToMouse.position = player.position + Vector3.ClampMagnitude(offset, 5);
         }
-
-       
     }
 
 }

@@ -6,18 +6,20 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     [SerializeField]
-    private int index;
-
-    [SerializeField]
     private GameObject boss;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" && !boss.activeSelf)
         {
-            Scene next = SceneManager.GetSceneByBuildIndex(index);
-            SceneManager.LoadSceneAsync(index);
-            SceneManager.SetActiveScene(next);
+            Next();
         }
+    }
+
+    public void Next()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+        index++;
+        SceneManager.LoadScene(index);
     }
 }
