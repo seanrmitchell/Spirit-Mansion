@@ -22,7 +22,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0.5166666666666667
+    m_Start: 1.5499999999999974
     m_ClipIn: 0
     m_Asset: {fileID: 3312961630706144828}
     m_Duration: 12.550000000000018
@@ -121,10 +121,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 13.066666666666666
+  m_Time: 15.250000000000016
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 81f783681423f194eae81d6116012a5b, type: 2}
+--- !u!114 &-2998917192275554014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
+  m_Name: CinemachineShot
+  m_EditorClassIdentifier: 
+  DisplayName: 
+  VirtualCamera:
+    exposedName: 4e85c3ec2f0ba664199591e97bb46d68
+    defaultValue: {fileID: 0}
 --- !u!114 &-2082285131089081055
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,7 +163,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 1.0333333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 3471257829355299313}
     m_Duration: 13.066666666666675
@@ -304,7 +320,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 1.0333333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 4923265413566574656}
     m_Duration: 13.06666666666667
@@ -400,13 +416,13 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -6461117996383729793}
-    m_Duration: 14.21666666666667
+    m_Duration: 15.250000000000016
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4529883869304970434}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: 1.1500000000000021
+    m_BlendInDuration: 1.0333333333333334
+    m_BlendOutDuration: 1.1499999999999932
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -430,7 +446,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Boss Battle
   - m_Version: 1
-    m_Start: 13.066666666666668
+    m_Start: 14.100000000000023
     m_ClipIn: 0
     m_Asset: {fileID: -1239375426627657395}
     m_Duration: 7.433333333333334
@@ -438,7 +454,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 4529883869304970434}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 1.1500000000000021
+    m_BlendInDuration: 1.1499999999999932
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -467,6 +483,57 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Top Down Cam
+  - m_Version: 1
+    m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: -2998917192275554014}
+    m_Duration: 1.0333333333333334
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4529883869304970434}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: 1.0333333333333334
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4

@@ -14,9 +14,6 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] //visible in editor
     private float speed;
 
-    [SerializeField]
-    private Rigidbody rb;
-
     Vector2 movement, mousePos;
     Vector3 direction;
 
@@ -33,7 +30,6 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
         player = GetComponent<CharacterController>();
     }
 

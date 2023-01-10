@@ -29,7 +29,7 @@ public class PlayerAttack : MonoBehaviour
     private float blastSize, blastCoolDown, blastDamage;
 
     private bool isBlasted = false;
-    private bool recharging = false;
+    //private bool recharging = false;
 
 
     void Awake()
