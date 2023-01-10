@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.078431375, g: 0.09803922, b: 0.18039216, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7ff43ed7516062f409c84ac5ceddc42f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18122035, g: 0.22681943, b: 0.30734062, a: 1}
+  m_IndirectSpecularColor: {r: 0.0069923284, g: 0.009719838, b: 0.02731327, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -41696,7 +41696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da189cc01f745243a988a149fe867c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: Bedroom
   boss: {fileID: 2126821525}
 --- !u!65 &2073126647
 BoxCollider:

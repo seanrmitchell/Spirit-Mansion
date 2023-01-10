@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.078431375, g: 0.098039225, b: 0.18039216, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7ff43ed7516062f409c84ac5ceddc42f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18122035, g: 0.22681943, b: 0.30734062, a: 1}
+  m_IndirectSpecularColor: {r: 0.0069923284, g: 0.009719838, b: 0.02731327, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1011,7 +1011,7 @@ Transform:
   m_GameObject: {fileID: 43677067}
   m_LocalRotation: {x: 0.49998185, y: 0.5000181, z: 0.5000181, w: -0.49998197}
   m_LocalPosition: {x: -4.000636, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1179644980}
@@ -16834,7 +16834,7 @@ Transform:
   m_GameObject: {fileID: 1149908469}
   m_LocalRotation: {x: 0.50003797, y: -0.49996212, z: -0.49996212, w: -0.50003785}
   m_LocalPosition: {x: 11.998737, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1179644980}
@@ -28514,7 +28514,7 @@ Transform:
   m_GameObject: {fileID: 1994776253}
   m_LocalRotation: {x: 0.50003797, y: -0.49996212, z: -0.49996212, w: -0.50003785}
   m_LocalPosition: {x: -4.001274, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1179644980}
@@ -30687,7 +30687,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1913706812218307670
 MeshFilter:
