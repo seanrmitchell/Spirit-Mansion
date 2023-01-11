@@ -17,7 +17,9 @@ public class Dialogue : MonoBehaviour
     //public float textSpeed;
 
     private int index;
-
+    [SerializeField] Color playerColor = Color.cyan;
+    [SerializeField] Color enemyColor = Color.red;
+    [SerializeField] Color neutralColor = Color.white;
     private void Awake()
     {
         skipText = new Controller();
@@ -72,10 +74,10 @@ public class Dialogue : MonoBehaviour
     void SpeakerColor()
     {
         if (!(speakers[index].Equals("Ghost")))
-            speaker.color = Color.red;
+            speaker.color = enemyColor;
         else if (speakers[index].Equals("Ghost"))
-            speaker.color = Color.blue;
+            speaker.color = playerColor;
         else
-            speaker.color = Color.white;
+            speaker.color = neutralColor;
     }
 }

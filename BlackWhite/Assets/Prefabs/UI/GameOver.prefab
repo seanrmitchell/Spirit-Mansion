@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 27.87}
   m_SizeDelta: {x: 670.8, y: 84.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5686114459749466834
@@ -68,15 +68,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Were Caught
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8cc6732621f799b4ab03708222160348, type: 2}
+  m_sharedMaterial: {fileID: -5849105595703681919, guid: 8cc6732621f799b4ab03708222160348, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4285792511
+  m_fontColor: {r: 1, g: 0, b: 0.45673084, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -93,17 +93,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.9
-  m_fontSizeBase: 65.9
+  m_fontSize: 94.26
+  m_fontSizeBase: 94.26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 32
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
-  m_characterSpacing: 7.9
+  m_characterSpacing: 0.7
   m_wordSpacing: 7.97
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -173,7 +173,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -53.6}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 314.7416, y: 65.5906}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5686114460433915804
 CanvasRenderer:
@@ -234,11 +234,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0.5686275}
-    m_PressedColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.5686275}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.5686275}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.5686275}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 0.5686275}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5686275}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -296,8 +296,8 @@ RectTransform:
   m_GameObject: {fileID: 5686114461151022510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5686114460433915803}
   m_RootOrder: 0
@@ -305,7 +305,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -153.3072, y: -45.2256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5686114461151022515
 CanvasRenderer:
@@ -337,22 +337,22 @@ MonoBehaviour:
       m_Calls: []
   m_text: Try Again
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8cc6732621f799b4ab03708222160348, type: 2}
+  m_sharedMaterial: {fileID: -5849105595703681919, guid: 8cc6732621f799b4ab03708222160348, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283640462
-  m_fontColor: {r: 0.5568628, g: 0.16470589, b: 0.3254902, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
+    rgba: 4294954796
+  m_fontColor: {r: 0.17358488, g: 0.8112509, b: 1, a: 1}
+  m_enableVertexGradient: 1
+  m_colorMode: 2
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 0.5802896, g: 0.5445176, b: 0.9716981, a: 1}
+    bottomRight: {r: 0.5802896, g: 0.5445176, b: 0.9716981, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -362,8 +362,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.55
-  m_fontSizeBase: 18.55
+  m_fontSize: 36.73
+  m_fontSizeBase: 36.73
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -547,8 +547,8 @@ RectTransform:
   m_GameObject: {fileID: 5686114461548572192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5686114459749466832}
   - {fileID: 5686114460433915803}
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9686275, g: 0.14509805, b: 0.5176471, a: 0.40392157}
+  m_Color: {r: 0.104289785, g: 0.17818385, b: 0.254717, a: 0.8745098}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

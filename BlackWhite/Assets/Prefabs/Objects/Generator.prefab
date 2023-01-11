@@ -185,6 +185,7 @@ MonoBehaviour:
   death: {fileID: 194563529018136000}
   current: {fileID: 4050713568791673861}
   desired: {fileID: 6505625290461016006, guid: 76aef4a1ff6e1a641beb4f7fb6358c6a, type: 3}
+  material: {fileID: 0}
   health: 0
   maxHealth: 3
   healthbarUI: {fileID: 4050713567718629318}
@@ -783,7 +784,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.67444664, g: 0.0990566, b: 1, a: 1}
-  m_Intensity: 4
+  m_Intensity: 10
   m_Range: 4.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
