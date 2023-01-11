@@ -23,8 +23,8 @@ public class BossHealth : MonoBehaviour
     [SerializeReference]
     private MeshRenderer material;
 
-    private Color color;
-    private Color damaged;
+    [SerializeField]
+    private Color color, damaged;
 
     private void Awake()
     {

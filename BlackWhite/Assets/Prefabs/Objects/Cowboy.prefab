@@ -791,6 +791,8 @@ MonoBehaviour:
   healthbarUI: {fileID: 1879929728640786190}
   slider: {fileID: 1879929727829904208}
   material: {fileID: 1879929728200073972}
+  color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  damaged: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &1879929729304051946
 MonoBehaviour:
   m_ObjectHideFlags: 0
