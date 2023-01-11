@@ -596,7 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 5584938836040964269}
   damage: 1
-  lookRadius: 20
+  lookRadius: 13
   attackCoolDown: 3
   attackRange: 0
   playerLayer:
