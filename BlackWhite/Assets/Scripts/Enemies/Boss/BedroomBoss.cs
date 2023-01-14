@@ -10,6 +10,8 @@ public class BedroomBoss : MonoBehaviour
     public GameObject boltPreFab;
     public Transform firePos;
 
+    public GameObject cutScene;
+
     [SerializeField]
     private float meleeDamage, meleeCoolDown, meleeRange, rangedCoolDown, rangedDamage, lookRadius, boltForce;
 
@@ -26,13 +28,13 @@ public class BedroomBoss : MonoBehaviour
     void Awake()
     {
         target = GameObject.Find("Player").transform;
-        enemy.isStopped = false;
+        enemy.isStopped = true;
     }
 
     private void Start()
     {
         meleeSpeed = 0f;
-        rangedSpeed = rangedCoolDown;
+        rangedSpeed = rangedCoolDown/2;
     }
 
 
@@ -94,7 +96,7 @@ public class BedroomBoss : MonoBehaviour
             target.GetComponent<PlayerAttack>().enabled = false;
             target.GetComponent<CharacterController>().enabled = false;
             target.GetComponent<PlayerMove>().enabled = false;
-            //cutScene.SetActive(true);
+            cutScene.SetActive(true);
 
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
             gameObject.GetComponent<BedroomBoss>().enabled = false;

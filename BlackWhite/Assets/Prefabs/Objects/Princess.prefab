@@ -130,7 +130,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Princess
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8cc6732621f799b4ab03708222160348, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 2717908991
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.6313726}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 8.152367}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1157592166262816134
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.76862746, g: 0.12156863, b: 0, a: 1}
+  m_Color: {r: 0.96862745, g: 0.14509805, b: 0.5176471, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -523,6 +523,8 @@ MonoBehaviour:
   healthbarUI: {fileID: 1157592167083751128}
   slider: {fileID: 1157592167718385215}
   material: {fileID: 1157592166394284671}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  damaged: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &636922491
 MonoBehaviour:
   m_ObjectHideFlags: 0

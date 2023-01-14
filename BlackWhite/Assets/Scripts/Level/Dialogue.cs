@@ -73,10 +73,12 @@ public class Dialogue : MonoBehaviour
 
     void SpeakerColor()
     {
-        if (!(speakers[index].Equals("Ghost")))
-            speaker.color = enemyColor;
-        else if (speakers[index].Equals("Ghost"))
+        if (speakers[index].Equals("Ghost"))
             speaker.color = playerColor;
+        else if (speakers[index].Equals("The Savior") || 
+            speakers[index].Equals("The Cowboy") || 
+            speakers[index].Equals("The Knight") || speakers[index].Equals("The Princess"))
+            speaker.color = enemyColor;
         else
             speaker.color = neutralColor;
     }

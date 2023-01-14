@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
 
     public CharacterController player;
 
-    public Camera cam;
+    private Camera cam;
 
     [SerializeField] //visible in editor
     private float speed;
@@ -31,6 +31,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         player = GetComponent<CharacterController>();
+        cam = Camera.main;
     }
 
     // Update is called once per frame

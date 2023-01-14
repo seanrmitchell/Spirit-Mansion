@@ -11,9 +11,6 @@ public class AwakeTrigger : MonoBehaviour
     [SerializeField]
     private BoxCollider box;
 
-    [SerializeField]
-    private GameObject bar;
-
     private GameObject player;
 
     private void Awake()
