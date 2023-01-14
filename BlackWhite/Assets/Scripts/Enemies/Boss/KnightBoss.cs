@@ -27,7 +27,7 @@ public class KnightBoss : MonoBehaviour
     void Awake()
     {
         target = GameObject.Find("Player").transform;
-        enemy.isStopped = false;
+        enemy.isStopped = true;
     }
 
     private void Start()
