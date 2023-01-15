@@ -9,6 +9,10 @@ public class KnightBoss : MonoBehaviour
 
     public GameObject boltPreFab;
 
+    public GameObject cutScene;
+
+    public GameObject princess;
+
     public Transform[] firePos;
 
     [SerializeField]
@@ -33,7 +37,7 @@ public class KnightBoss : MonoBehaviour
     private void Start()
     {
         meleeSpeed = 0f;
-        rangedSpeed = rangedCoolDown;
+        rangedSpeed = rangedCoolDown/3;
     }
 
 
@@ -93,13 +97,18 @@ public class KnightBoss : MonoBehaviour
             rangedSpeed += Time.deltaTime;
         }
 
-        if (gameObject.GetComponent<BossHealth>().CalculateHealth() <= 0)
+        if (gameObject.GetComponent<BossHealth>().CalculateHealth() <= 0 && princess.GetComponent<BossHealth>().CalculateHealth() <= 0)
         {
             target.GetComponent<PlayerAttack>().enabled = false;
             target.GetComponent<CharacterController>().enabled = false;
             target.GetComponent<PlayerMove>().enabled = false;
-            //cutScene.SetActive(true);
+            cutScene.SetActive(true);
 
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            gameObject.GetComponent<KnightBoss>().enabled = false;
+        } 
+        else if (gameObject.GetComponent<BossHealth>().CalculateHealth() <= 0)
+        {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
             gameObject.GetComponent<KnightBoss>().enabled = false;
         }

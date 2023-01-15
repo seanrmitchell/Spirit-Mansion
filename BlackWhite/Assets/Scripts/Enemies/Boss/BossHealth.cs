@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class BossHealth : MonoBehaviour
 {
-    
+    public bool destroyed = false;
 
     [SerializeReference]
     private float health = 0f;

@@ -11,6 +11,10 @@ public class PrincessBoss : MonoBehaviour
 
     public Transform firePos;
 
+    public GameObject knight;
+
+    public GameObject cutScene;
+
     [SerializeField]
     private float meleeDamage, meleeCoolDown, meleeRange, rangedCoolDown, rangedDamage, lookRadius, boltForce;
 
@@ -30,13 +34,13 @@ public class PrincessBoss : MonoBehaviour
     void Awake()
     {
         target = GameObject.Find("Player").transform;
-        enemy.isStopped = false;
+        enemy.isStopped = true;
     }
 
     private void Start()
     {
         meleeSpeed = 0f;
-        rangedSpeed = rangedCoolDown;
+        rangedSpeed = rangedCoolDown/3;
     }
 
 
@@ -96,13 +100,18 @@ public class PrincessBoss : MonoBehaviour
             rangedSpeed += Time.deltaTime;
         }
 
-        if (gameObject.GetComponent<BossHealth>().CalculateHealth() <= 0)
+        if (gameObject.GetComponent<BossHealth>().CalculateHealth() <= 0 && knight.GetComponent<BossHealth>().CalculateHealth() <= 0)
         {
             target.GetComponent<PlayerAttack>().enabled = false;
             target.GetComponent<CharacterController>().enabled = false;
             target.GetComponent<PlayerMove>().enabled = false;
-            //cutScene.SetActive(true);
+            cutScene.SetActive(true);
 
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            gameObject.GetComponent<PrincessBoss>().enabled = false;
+        }
+        else if (gameObject.GetComponent<BossHealth>().CalculateHealth() <= 0)
+        {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
             gameObject.GetComponent<PrincessBoss>().enabled = false;
         }
