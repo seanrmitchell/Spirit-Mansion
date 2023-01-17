@@ -34,7 +34,7 @@ public class BedroomBoss : MonoBehaviour
     private void Start()
     {
         meleeSpeed = 0f;
-        rangedSpeed = rangedCoolDown/2;
+        rangedSpeed = 0f;
     }
 
 

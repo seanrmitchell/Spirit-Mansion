@@ -7,9 +7,11 @@ public class PlayerAttack : MonoBehaviour
 {
     public Controller playerControls;
 
-    public Transform firePos, blastPos;
+    public Transform firePos;
 
-    public GameObject boltPreFab, blastPreFab;
+    public GameObject boltPreFab;
+
+    public AudioSource boltSound;
 
     public float playerDamage;
 
@@ -25,10 +27,12 @@ public class PlayerAttack : MonoBehaviour
     //boltCooldownTime, boltMaxShot;
     //private float boltShot;
 
+    /*
     [SerializeField]
     private float blastSize, blastCoolDown, blastDamage;
+    */
 
-    private bool isBlasted = false;
+    //private bool isBlasted = false;
     //private bool recharging = false;
 
 
@@ -58,7 +62,8 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         playerControls.Attack.Primary.performed += _ => Primary();
-        playerControls.Attack.Secondary.performed += _ => Secondary();
+
+        //playerControls.Attack.Secondary.performed += _ => Secondary();
     }
 
     void FixedUpdate()
@@ -70,6 +75,8 @@ public class PlayerAttack : MonoBehaviour
     {
         Debug.Log("Primary!");
 
+        boltSound.Play();
+
         // Creates bolt object and sends a force based on direction player facing
         GameObject bolt = Instantiate(boltPreFab, firePos.position, firePos.rotation);
         Rigidbody rb = bolt.GetComponent<Rigidbody>();
@@ -77,6 +84,7 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
+    /*
     private void Secondary()
     {
         Debug.Log("Secondary!");
@@ -104,14 +112,15 @@ public class PlayerAttack : MonoBehaviour
         }
 
 
-    }
+    }*/
 
+        /*
     IEnumerator Blast()
     {
         yield return new WaitForSeconds(blastCoolDown);
         Debug.Log("Cooldown Finished!");
         isBlasted = false;
-    }
+    }*/
 
     /*
     IEnumerator Bolt()
@@ -123,11 +132,5 @@ public class PlayerAttack : MonoBehaviour
             recharging = false;
     }
     */
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(blastPos.position, blastSize);
-    }
 
 }

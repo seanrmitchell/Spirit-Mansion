@@ -1961,6 +1961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
+--- !u!1 &73986522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3816204792565426882, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
+  m_PrefabInstance: {fileID: 73986521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &78166805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,6 +4886,18 @@ PrefabInstance:
       propertyPath: princess
       value: 
       objectReference: {fileID: 886857375}
+    - target: {fileID: 3816204792565426882, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853463615447232233, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853463615447232233, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7133540265564056867, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -4955,6 +4972,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
+--- !u!1 &188820878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3816204792565426882, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
+  m_PrefabInstance: {fileID: 188820877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &189628707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6512,7 +6534,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 1420646590}
+        - m_Target: {fileID: 73986522}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -16384,6 +16406,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Princess (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3459308153883866864, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570875975795389147, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.493
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570875975795389147, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 636922491, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
     - {fileID: 1157592166943901047, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
@@ -18145,11 +18179,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761048160}
   m_Mesh: {fileID: 4596239184023814631, guid: 6082f8e809927e44eb56e7a62942521c, type: 3}
---- !u!1 &764538284 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7133540266219019568, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
-  m_PrefabInstance: {fileID: 188820877}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &771061126
 GameObject:
   m_ObjectHideFlags: 0
@@ -26043,7 +26072,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 764538284}
+        - m_Target: {fileID: 188820878}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -26079,7 +26108,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 1227872479}
+        - m_Target: {fileID: 1774348154}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -28686,11 +28715,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226602728}
   m_Mesh: {fileID: -2324805702014221511, guid: c9592976a50c72d4cabe1c2e13271131, type: 3}
---- !u!1 &1227872479 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1157592167083751128, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
-  m_PrefabInstance: {fileID: 1774348153}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1231537079
 GameObject:
   m_ObjectHideFlags: 3
@@ -32682,6 +32706,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2583784175760527219, guid: 2c9fbae6a51d41045b5054d454e7b866, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2583784176202215062, guid: 2c9fbae6a51d41045b5054d454e7b866, type: 3}
       propertyPath: player
       value: 
@@ -33306,11 +33334,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7366885237098494011, guid: 68e1acd82fb41e4489b3627c2878d31d, type: 3}
   m_PrefabInstance: {fileID: 1417439628}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1420646590 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7133540266219019568, guid: c9aaacf058c85794b81f8b3feb6655ee, type: 3}
-  m_PrefabInstance: {fileID: 73986521}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1421543409
 GameObject:
@@ -40835,6 +40858,14 @@ PrefabInstance:
       propertyPath: cutScene
       value: 
       objectReference: {fileID: 1517755533}
+    - target: {fileID: 526510698317509959, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 526510698317509959, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1157592166262816129, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -40899,8 +40930,45 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3459308153883866864, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570875975795389147, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570875975795389147, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161323860543368181, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 142.5583
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161323860543368181, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 35.6396
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161323860543368181, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000038147
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161323860543368181, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000015259
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161323860543368181, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -130.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+--- !u!1 &1774348154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3459308153883866864, guid: b99f85da61e0bb04aa3b01a2c620d206, type: 3}
+  m_PrefabInstance: {fileID: 1774348153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1779444752 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4050713566911551849, guid: 4aef8caf3c238154da6b90c299156824, type: 3}

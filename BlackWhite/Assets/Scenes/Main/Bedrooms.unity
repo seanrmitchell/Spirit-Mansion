@@ -455,11 +455,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11019841}
   m_Mesh: {fileID: -7514991316261419789, guid: 6082f8e809927e44eb56e7a62942521c, type: 3}
---- !u!1 &13099945 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1879929728640786190, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
-  m_PrefabInstance: {fileID: 396454620}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &14197943
 GameObject:
   m_ObjectHideFlags: 0
@@ -7041,7 +7036,7 @@ PrefabInstance:
       objectReference: {fileID: 1295080387}
     - target: {fileID: 5292207245978705108, guid: 90ae2851e00ca614482e8702f39f4ec3, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5292207245978705112, guid: 90ae2851e00ca614482e8702f39f4ec3, type: 3}
       propertyPath: cam
@@ -7770,6 +7765,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5201544253880187921, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.493
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201544253880187921, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5305304439448287290, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
 --- !u!4 &396454621 stripped
@@ -7793,6 +7800,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada4694ee67549e468d8284a4e13ca47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &396454624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5305304439448287290, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
+  m_PrefabInstance: {fileID: 396454620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!195 &396454626 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 1879929729304051943, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
@@ -8334,11 +8346,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409634615}
   m_Mesh: {fileID: 4798890978013233310, guid: 6082f8e809927e44eb56e7a62942521c, type: 3}
---- !u!1 &410557816 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1879929728640786190, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
-  m_PrefabInstance: {fileID: 1396141476}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &413496047
 GameObject:
   m_ObjectHideFlags: 0
@@ -18005,7 +18012,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 65
+  field of view: 55
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -18711,7 +18718,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 410557816}
+        - m_Target: {fileID: 1396141479}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -23988,7 +23995,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1337550776}
   m_Follow: {fileID: 1337550776}
   m_Lens:
-    FieldOfView: 55
+    FieldOfView: 65
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -25722,6 +25729,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5305304439448287290, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
 --- !u!4 &1396141477 stripped
@@ -25740,6 +25751,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada4694ee67549e468d8284a4e13ca47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1396141479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5305304439448287290, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
+  m_PrefabInstance: {fileID: 1396141476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!195 &1396141481 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 1879929729304051943, guid: 433837f201fdace44afca9b745c26d3d, type: 3}
@@ -30879,7 +30895,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 410557816}
+        - m_Target: {fileID: 1396141479}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -32482,7 +32498,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 13099945}
+        - m_Target: {fileID: 396454624}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -36785,6 +36801,10 @@ PrefabInstance:
     - target: {fileID: 5370088201783408381, guid: bf9abf015a330c8468389bed92f91cf9, type: 3}
       propertyPath: m_LookAt
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370088201783408381, guid: bf9abf015a330c8468389bed92f91cf9, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 5370088201783408382, guid: bf9abf015a330c8468389bed92f91cf9, type: 3}
       propertyPath: m_Name

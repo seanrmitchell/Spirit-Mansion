@@ -20,6 +20,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] Color playerColor = Color.cyan;
     [SerializeField] Color enemyColor = Color.red;
     [SerializeField] Color neutralColor = Color.white;
+
     private void Awake()
     {
         skipText = new Controller();
@@ -50,14 +51,15 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        skipText.Attack.Primary.performed += _ => NextLine();
+           skipText.Attack.Primary.performed += _ => NextLine();
     }
 
     void NextLine()
     {
-        if (textComp.text == lines[index])
+        if (index <= lines.Length - 1 && textComp.text == lines[index])
         {
             index++;
+
             if (index <= lines.Length - 1)
             {
                 SpeakerColor();

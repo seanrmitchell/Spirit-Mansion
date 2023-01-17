@@ -24,6 +24,9 @@ public class Generator : MonoBehaviour
     private GameObject healthbarUI;
 
     [SerializeField]
+    private Light pointLight;
+
+    [SerializeField]
     private Slider slider;
 
     private Color color;
@@ -36,7 +39,6 @@ public class Generator : MonoBehaviour
         if (other.gameObject.tag == "Player Attack" && !destroyed)
         {
             UpdateHealth(other.GetComponent<BoltFunction>().damage);
-            
         }
     }
 
@@ -47,9 +49,12 @@ public class Generator : MonoBehaviour
 
     private void Start()
     {
+
+        // Sets health
         health = maxHealth;
         slider.value = CalculateHealth();
 
+        // Sets colors
         color = material.material.color;
         damaged = new Color(3.5f, 0.6f, 0.6f, 1f);
     }
@@ -58,9 +63,14 @@ public class Generator : MonoBehaviour
     {
         if (!destroyed)
         {
+            // Starts a hit effect changing color
             StartCoroutine(Hit());
             healthbarUI.SetActive(true);
+
+            // Health subtracted by damage taken
             health -= mod;
+
+            // Changes slider to current health
             slider.value = CalculateHealth();
 
             if (health > maxHealth)
@@ -75,6 +85,7 @@ public class Generator : MonoBehaviour
                 death.Play();
                 
                 healthbarUI.SetActive(false);
+                pointLight.intensity = 0.5f;
             }
         }
     }

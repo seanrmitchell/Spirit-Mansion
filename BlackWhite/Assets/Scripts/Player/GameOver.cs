@@ -11,6 +11,8 @@ public class GameOver : MonoBehaviour
 
     public Controller playerInput;
 
+    private GameObject player;
+
     public GameOver()
     {
         isGameOver = false;
@@ -19,6 +21,8 @@ public class GameOver : MonoBehaviour
     private void Awake()
     {
         playerInput = new Controller();
+
+        player = GameObject.Find("Player");
     }
 
     private void OnEnable()
@@ -37,6 +41,8 @@ public class GameOver : MonoBehaviour
         Debug.Log("Player Dead...");
         gameOverMenuUI.SetActive(true);
         isGameOver = true;
+        player.GetComponent<PlayerAttack>().enabled = false;
+        player.GetComponent<PlayerMove>().enabled = false;
         Time.timeScale = 0f;
     }
 

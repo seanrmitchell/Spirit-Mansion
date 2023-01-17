@@ -42,9 +42,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 113210621ba3f454f9b613d953f6aa96, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4a0b80437d66cf4409df5e59d6bf55c4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.125
+  m_Volume: 0.5
   m_Pitch: 0.75
   Loop: 0
   Mute: 0
@@ -185,10 +185,13 @@ MonoBehaviour:
   death: {fileID: 194563529018136000}
   current: {fileID: 4050713568791673861}
   desired: {fileID: 6505625290461016006, guid: 76aef4a1ff6e1a641beb4f7fb6358c6a, type: 3}
+  newMat: {fileID: 2100000, guid: f36e3ae27934cc04786835585ce47aa7, type: 2}
   material: {fileID: 0}
+  rend: {fileID: 0}
   health: 0
   maxHealth: 3
   healthbarUI: {fileID: 4050713567718629318}
+  pointLight: {fileID: 1805999506595898069}
   slider: {fileID: 4050713567981423207}
 --- !u!54 &4050713566911551863
 Rigidbody:
@@ -647,7 +650,6 @@ GameObject:
   - component: {fileID: 4050713568791673863}
   - component: {fileID: 4050713568791673861}
   - component: {fileID: 4050713568791673862}
-  - component: {fileID: 8792891064414219152}
   m_Layer: 7
   m_Name: Mesh
   m_TagString: Untagged
@@ -720,26 +722,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &8792891064414219152
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4050713568791673976}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 41f932f59f8c32d438d91da59e72b5f3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &4091623759179204836
 GameObject:
   m_ObjectHideFlags: 0
