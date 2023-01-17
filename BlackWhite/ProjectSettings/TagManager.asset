@@ -10,6 +10,10 @@ TagManager:
   - Boss
   - Generator
   - Bolt
+  - Savior
+  - Knight
+  - Cowboy
+  - Princess
   layers:
   - Default
   - TransparentFX
@@ -20,7 +24,7 @@ TagManager:
   - Player
   - Enemy
   - Post Processing Volume
-  - 
+  - Boss
   - 
   - 
   - 

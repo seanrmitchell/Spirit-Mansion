@@ -181,6 +181,34 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Cutscene Skip"",
+            ""id"": ""b29db63a-18ea-4078-9236-99fbab8087b5"",
+            ""actions"": [
+                {
+                    ""name"": ""Skip"",
+                    ""type"": ""Button"",
+                    ""id"": ""e5be7e1c-d4ba-4467-9bf3-941e4b281b4d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""6543e314-c57d-4238-a11a-523992508c5f"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -195,6 +223,9 @@ public partial class @Controller : IInputActionCollection2, IDisposable
         // Pause
         m_Pause = asset.FindActionMap("Pause", throwIfNotFound: true);
         m_Pause_Pause = m_Pause.FindAction("Pause", throwIfNotFound: true);
+        // Cutscene Skip
+        m_CutsceneSkip = asset.FindActionMap("Cutscene Skip", throwIfNotFound: true);
+        m_CutsceneSkip_Skip = m_CutsceneSkip.FindAction("Skip", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -357,6 +388,39 @@ public partial class @Controller : IInputActionCollection2, IDisposable
         }
     }
     public PauseActions @Pause => new PauseActions(this);
+
+    // Cutscene Skip
+    private readonly InputActionMap m_CutsceneSkip;
+    private ICutsceneSkipActions m_CutsceneSkipActionsCallbackInterface;
+    private readonly InputAction m_CutsceneSkip_Skip;
+    public struct CutsceneSkipActions
+    {
+        private @Controller m_Wrapper;
+        public CutsceneSkipActions(@Controller wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Skip => m_Wrapper.m_CutsceneSkip_Skip;
+        public InputActionMap Get() { return m_Wrapper.m_CutsceneSkip; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CutsceneSkipActions set) { return set.Get(); }
+        public void SetCallbacks(ICutsceneSkipActions instance)
+        {
+            if (m_Wrapper.m_CutsceneSkipActionsCallbackInterface != null)
+            {
+                @Skip.started -= m_Wrapper.m_CutsceneSkipActionsCallbackInterface.OnSkip;
+                @Skip.performed -= m_Wrapper.m_CutsceneSkipActionsCallbackInterface.OnSkip;
+                @Skip.canceled -= m_Wrapper.m_CutsceneSkipActionsCallbackInterface.OnSkip;
+            }
+            m_Wrapper.m_CutsceneSkipActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Skip.started += instance.OnSkip;
+                @Skip.performed += instance.OnSkip;
+                @Skip.canceled += instance.OnSkip;
+            }
+        }
+    }
+    public CutsceneSkipActions @CutsceneSkip => new CutsceneSkipActions(this);
     public interface IMovementActions
     {
         void OnWASD(InputAction.CallbackContext context);
@@ -369,5 +433,9 @@ public partial class @Controller : IInputActionCollection2, IDisposable
     public interface IPauseActions
     {
         void OnPause(InputAction.CallbackContext context);
+    }
+    public interface ICutsceneSkipActions
+    {
+        void OnSkip(InputAction.CallbackContext context);
     }
 }

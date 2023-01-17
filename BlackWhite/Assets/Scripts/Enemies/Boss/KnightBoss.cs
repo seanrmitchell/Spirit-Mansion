@@ -97,7 +97,7 @@ public class KnightBoss : MonoBehaviour
             rangedSpeed += Time.deltaTime;
         }
 
-        if (gameObject.GetComponent<BossHealth>().CalculateHealth() <= 0 && princess.GetComponent<BossHealth>().CalculateHealth() <= 0)
+        if (gameObject.GetComponent<BossHealth>().CalculateHealth() <= 0 && (princess.GetComponent<BossHealth>().CalculateHealth() <= 0 || !princess.activeSelf))
         {
             target.GetComponent<PlayerAttack>().enabled = false;
             target.GetComponent<CharacterController>().enabled = false;

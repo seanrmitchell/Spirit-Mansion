@@ -95,7 +95,7 @@ public class PlayerAttack : MonoBehaviour
                     enemy.GetComponent<EnemyHealth>().UpdateHealth(blastDamage);
                 else if (enemy.gameObject.tag == "Generator")
                     enemy.GetComponent<Generator>().UpdateHealth(blastDamage);
-                else if (enemy.gameObject.tag == "Boss")
+                else if (enemy.gameObject.layer == 9)
                     enemy.GetComponent<BossHealth>().UpdateHealth(blastDamage);
             }
 

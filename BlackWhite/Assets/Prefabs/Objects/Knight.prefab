@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468178546}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: firePos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 772773541}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: firePos3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022943125}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: meleePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2056179902}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: firePos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7133540265465617794}
   - component: {fileID: 7133540265465617793}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7133540265539680557}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,9 +266,9 @@ GameObject:
   - component: {fileID: 7133540265564056865}
   - component: {fileID: 7133540265564056866}
   - component: {fileID: 1513405759}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Knight
-  m_TagString: Boss
+  m_TagString: Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 7133540265805321797}
   - component: {fileID: 7133540265805321795}
   - component: {fileID: 7133540265805321796}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 7133540266219019564}
   - component: {fileID: 7133540266219019565}
   - component: {fileID: 7133540266219019566}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: BossBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 7133540266227903384}
   - component: {fileID: 7133540266227903382}
   - component: {fileID: 7133540266227903383}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 7133540266245343069}
   - component: {fileID: 7133540266245343067}
   - component: {fileID: 7133540266245343068}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 7133540266478013081}
   - component: {fileID: 7133540266478013079}
   - component: {fileID: 7133540266478013080}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7133540267230375992}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1879929727651508052}
   - component: {fileID: 1879929727651508054}
   - component: {fileID: 1879929727651508055}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1879929727829904211}
   - component: {fileID: 1879929727829904208}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1879929727842496524}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: firePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1879929727993736157}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1879929728196125597}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 1879929728200073973}
   - component: {fileID: 1879929728200073975}
   - component: {fileID: 1879929728200073972}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 1879929728640786186}
   - component: {fileID: 1879929728640786187}
   - component: {fileID: 1879929728640786184}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: BossBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 1879929729105691610}
   - component: {fileID: 1879929729105691604}
   - component: {fileID: 1879929729105691605}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1879929729134432646}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: meleePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 1879929729192015390}
   - component: {fileID: 1879929729192015384}
   - component: {fileID: 1879929729192015385}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,9 +713,9 @@ GameObject:
   - component: {fileID: 1879929729304051940}
   - component: {fileID: 1879929729304051941}
   - component: {fileID: 1879929729304051946}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Cowboy
-  m_TagString: Boss
+  m_TagString: Cowboy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,6 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da830d81bdef3740ac45278866e466b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   health: 0
   maxHealth: 30
   healthbarUI: {fileID: 1879929728640786190}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 345133114}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: meleePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1790001663}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: firePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 1157592165765568409}
   - component: {fileID: 1157592165765568411}
   - component: {fileID: 1157592165765568408}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 1157592166262816129}
   - component: {fileID: 1157592166262816131}
   - component: {fileID: 1157592166262816128}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 1157592166394284668}
   - component: {fileID: 1157592166394284670}
   - component: {fileID: 1157592166394284671}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 1157592166873887291}
   - component: {fileID: 1157592166873887285}
   - component: {fileID: 1157592166873887290}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,9 +445,9 @@ GameObject:
   - component: {fileID: 1157592166943901044}
   - component: {fileID: 1157592166943901045}
   - component: {fileID: 636922491}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Princess
-  m_TagString: Boss
+  m_TagString: Princess
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da830d81bdef3740ac45278866e466b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
   health: 0
   maxHealth: 15
   healthbarUI: {fileID: 1157592167083751128}
@@ -540,6 +541,8 @@ MonoBehaviour:
   enemy: {fileID: 1157592166943901047}
   boltPreFab: {fileID: 7858409268150114526, guid: d14024b0bc9efb247a872f1c83d59c68, type: 3}
   firePos: {fileID: 1790001663}
+  knight: {fileID: 0}
+  cutScene: {fileID: 0}
   meleeDamage: 2
   meleeCoolDown: 1
   meleeRange: 1
@@ -561,7 +564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157592167074634869}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +603,7 @@ GameObject:
   - component: {fileID: 1157592167083751124}
   - component: {fileID: 1157592167083751125}
   - component: {fileID: 1157592167083751130}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: BossBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157592167307198203}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157592167718385212}
   - component: {fileID: 1157592167718385215}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
