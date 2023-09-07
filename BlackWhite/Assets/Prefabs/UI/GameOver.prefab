@@ -520,6 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverMenuUI: {fileID: 5686114461463556403}
   isGameOver: 0
+  selected: {fileID: 5686114460433915800}
 --- !u!1 &5686114461548572192
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,9 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField]
     private Transform attackPoint;
 
+    [SerializeField]
+    private Animator an;
+
     private Transform target;
 
 
@@ -72,6 +75,11 @@ public class MeleeEnemy : MonoBehaviour
             attackSpeed += Time.deltaTime;
         }
 
+    }
+
+    private void Update()
+    {
+        an.SetFloat("speed", enemy.velocity.magnitude / enemy.speed);
     }
 
     void OnDrawGizmosSelected()

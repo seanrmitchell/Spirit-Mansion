@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main/Attic.unity
     guid: 919115f7835510744a3fbd0db150faa3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main/Bedrooms.unity
     guid: c609a2c8bd62117449df0325d4270b55
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main/Ground Floor.unity
     guid: 3f383ea974411ff4f80ce583fd16bf5c
   - enabled: 1

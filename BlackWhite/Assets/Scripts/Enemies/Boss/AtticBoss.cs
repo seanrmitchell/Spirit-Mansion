@@ -18,6 +18,9 @@ public class AtticBoss : MonoBehaviour
     private LayerMask playerLayer;
 
     [SerializeField]
+    Animator an;
+
+    [SerializeField]
     private Transform attackPoint;
 
     private Transform target;
@@ -78,6 +81,8 @@ public class AtticBoss : MonoBehaviour
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
             gameObject.GetComponent<AtticBoss>().enabled = false;
         }
+
+        an.SetFloat("speed", enemy.velocity.magnitude / enemy.speed);
     }
 
     void OnDrawGizmosSelected()

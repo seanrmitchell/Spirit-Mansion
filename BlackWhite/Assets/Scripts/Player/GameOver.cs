@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameOver : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class GameOver : MonoBehaviour
     public bool isGameOver;
 
     public Controller playerInput;
+
+    [SerializeField]
+    private GameObject selected;
 
     private GameObject player;
 
@@ -43,6 +47,7 @@ public class GameOver : MonoBehaviour
         isGameOver = true;
         player.GetComponent<PlayerAttack>().enabled = false;
         player.GetComponent<PlayerMove>().enabled = false;
+        EventSystem.current.SetSelectedGameObject(selected);
         Time.timeScale = 0f;
     }
 

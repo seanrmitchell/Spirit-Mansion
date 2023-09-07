@@ -100,4 +100,11 @@ public class Pause : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Resume();
     }
+
+    public void Menu()
+    {
+        Debug.Log("Returning to Main Menu");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Main Menu");
+    }
 }

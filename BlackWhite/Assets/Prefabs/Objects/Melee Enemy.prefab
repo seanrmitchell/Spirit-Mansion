@@ -520,6 +520,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackPoint: {fileID: 7671147171700758766}
+  an: {fileID: 3054241754706304208}
 --- !u!114 &7671147173324961748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,6 +664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goon_02
       objectReference: {fileID: 0}
+    - target: {fileID: 2090885494384197702, guid: 98f390b4ff4303949ae3d8d7a2b94822, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4645982771194823920, guid: 879dfd1580aaf3544ae858808f86a424, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f390b4ff4303949ae3d8d7a2b94822, type: 3}
 --- !u!4 &4894280518344043857 stripped
