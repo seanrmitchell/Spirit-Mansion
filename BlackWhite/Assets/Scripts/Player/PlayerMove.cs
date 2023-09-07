@@ -5,26 +5,45 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public InputAction playerControls;
+    public Controller playerControls;
 
     public CharacterController player;
 
     private Camera cam;
 
     [SerializeField] //visible in editor
-    private float speed;
+    private float speed, smoothTime;
 
-    Vector2 movement, mousePos;
-    Vector3 direction;
+    [SerializeField]
+    private Animator an;
+
+    private float currentVelocity;
+
+    Vector2 movement, rotation;
+    Vector3 direction, axis;
 
     private void OnEnable()
     {
-        playerControls.Enable();
+        playerControls.Movement.Enable();
     }
 
     private void OnDisable()
     {
-        playerControls.Disable();
+        playerControls.Movement.Disable();
+    }
+
+    private void Awake()
+    {
+        playerControls = new Controller();
+
+
+        // Enables player movement controls in script
+        playerControls.Movement.WASD.performed += ctx => movement = ctx.ReadValue<Vector2>();
+        playerControls.Movement.WASD.canceled += ctx => movement = Vector2.zero;
+
+        // Enables player rotation in script
+        playerControls.Movement.Rotation.performed += ctx => rotation = ctx.ReadValue<Vector2>();
+        playerControls.Movement.Rotation.canceled += ctx => rotation = Vector2.zero;
     }
 
     // Start is called before the first frame update
@@ -40,9 +59,10 @@ public class PlayerMove : MonoBehaviour
 
         // Player Looks at Mouse
 
-        mousePos = Mouse.current.position.ReadValue();
-        Ray ray = cam.ScreenPointToRay(mousePos);
-        Plane ground = new Plane(Vector3.up, Vector3.zero);
+        //mousePos = Mouse.current.position.ReadValue();
+        //Ray ray = cam.ScreenPointToRay(rotation);
+        /*
+         * Plane ground = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
 
         if(ground.Raycast(ray, out rayLength))
@@ -52,18 +72,33 @@ public class PlayerMove : MonoBehaviour
 
             transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
         }
+        */
 
-        // Gets horizontal input
+        //transform.LookAt(new Vector3(rotation.x, transform.position.y, rotation.z));
 
-        movement = playerControls.ReadValue<Vector2>();
-        direction = new Vector3(movement.x, -0.25f , movement.y).normalized;
+        // saves horizontal movement
+        direction = new Vector3(movement.x, -0.75f, movement.y).normalized;
+        player.Move(direction * speed * Time.deltaTime);
+
+        an.SetFloat("speed", Mathf.Abs(movement.magnitude));
 
         // Makes dude move
         //rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
-        //Vector3 move = transform.right * direction.x + transform.forward * direction.z;
-        player.Move(direction * speed * Time.deltaTime);
-        //rb.velocity = direction * speed * Time.deltaTime;
 
+
+        // Roatation of player
+
+        //axis = new Vector3(-rotation.x, transform.rotation.y, -rotation.y);
+
+
+
+
+        if (rotation != Vector2.zero)
+        {
+            var targetAngle = Mathf.Atan2(rotation.x, rotation.y) * Mathf.Rad2Deg;
+            var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref currentVelocity, smoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        }
     }
 
     private void FixedUpdate()

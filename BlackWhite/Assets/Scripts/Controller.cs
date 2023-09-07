@@ -29,19 +29,39 @@ public partial class @Controller : IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""WASD"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""6eadf262-5f6d-4569-bbb1-f308b8477648"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Rotation"",
+                    ""type"": ""Value"",
+                    ""id"": ""d25c019a-b06d-4afc-be0d-9bc6ecd33714"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": ""Vertical"",
-                    ""id"": ""c132a700-dab3-44e7-999a-828fc17caf1d"",
-                    ""path"": ""1DAxis"",
+                    ""name"": """",
+                    ""id"": ""2f116237-a508-453d-a0d1-04a2f1695cfd"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""WASD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""557b691f-1669-4ff1-8e0e-906c9a9b3e98"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -50,59 +70,70 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""f1d3918f-8d36-45df-9bba-856b83897940"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""WASD"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""6a684439-d4d6-4308-a8d4-acbb3f2e9d38"",
+                    ""name"": ""up"",
+                    ""id"": ""8ea0fc83-160e-411a-914b-14a869b179fd"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""WASD"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Horizontal"",
-                    ""id"": ""f2bfea7d-b852-44c4-9107-d63b399ca059"",
-                    ""path"": ""1DAxis"",
+                    ""name"": ""down"",
+                    ""id"": ""43db6edf-1f9b-4f47-b14a-31f162c3d61d"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""WASD"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""56c97b9c-1599-4f35-b9b9-3eabd33aeddf"",
+                    ""name"": ""left"",
+                    ""id"": ""9511f3ca-9588-466b-a6d4-083ee46bfc29"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""WASD"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""positive"",
-                    ""id"": ""0425afa3-d9a5-4255-b686-535c1ee83f98"",
+                    ""name"": ""right"",
+                    ""id"": ""b8323a06-8185-4c63-9874-9af45b814059"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""WASD"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""09c75dd0-48e2-49af-a572-9098764d24a5"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""66728a75-085e-4953-84aa-572361c72d4a"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -136,7 +167,18 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Primary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e1bf9afe-91e0-477a-8442-c37833456a8e"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Primary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -147,7 +189,18 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Secondary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""08e65680-cf68-4c55-9d2e-e7e8cc4a6c5b"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Secondary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -175,7 +228,18 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""58fdb0f9-f300-4209-8832-8ea2572fb539"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -203,7 +267,18 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d601355d-e85a-4158-89bd-009b70e7f784"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Skip"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -211,11 +286,35 @@ public partial class @Controller : IInputActionCollection2, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<XInputController>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Keyboard"",
+            ""bindingGroup"": ""Keyboard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // Movement
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
         m_Movement_WASD = m_Movement.FindAction("WASD", throwIfNotFound: true);
+        m_Movement_Rotation = m_Movement.FindAction("Rotation", throwIfNotFound: true);
         // Attack
         m_Attack = asset.FindActionMap("Attack", throwIfNotFound: true);
         m_Attack_Primary = m_Attack.FindAction("Primary", throwIfNotFound: true);
@@ -286,11 +385,13 @@ public partial class @Controller : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Movement;
     private IMovementActions m_MovementActionsCallbackInterface;
     private readonly InputAction m_Movement_WASD;
+    private readonly InputAction m_Movement_Rotation;
     public struct MovementActions
     {
         private @Controller m_Wrapper;
         public MovementActions(@Controller wrapper) { m_Wrapper = wrapper; }
         public InputAction @WASD => m_Wrapper.m_Movement_WASD;
+        public InputAction @Rotation => m_Wrapper.m_Movement_Rotation;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -303,6 +404,9 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                 @WASD.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnWASD;
                 @WASD.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnWASD;
                 @WASD.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnWASD;
+                @Rotation.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnRotation;
+                @Rotation.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnRotation;
+                @Rotation.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnRotation;
             }
             m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -310,6 +414,9 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                 @WASD.started += instance.OnWASD;
                 @WASD.performed += instance.OnWASD;
                 @WASD.canceled += instance.OnWASD;
+                @Rotation.started += instance.OnRotation;
+                @Rotation.performed += instance.OnRotation;
+                @Rotation.canceled += instance.OnRotation;
             }
         }
     }
@@ -421,9 +528,28 @@ public partial class @Controller : IInputActionCollection2, IDisposable
         }
     }
     public CutsceneSkipActions @CutsceneSkip => new CutsceneSkipActions(this);
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
+    {
+        get
+        {
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
+    private int m_KeyboardSchemeIndex = -1;
+    public InputControlScheme KeyboardScheme
+    {
+        get
+        {
+            if (m_KeyboardSchemeIndex == -1) m_KeyboardSchemeIndex = asset.FindControlSchemeIndex("Keyboard");
+            return asset.controlSchemes[m_KeyboardSchemeIndex];
+        }
+    }
     public interface IMovementActions
     {
         void OnWASD(InputAction.CallbackContext context);
+        void OnRotation(InputAction.CallbackContext context);
     }
     public interface IAttackActions
     {

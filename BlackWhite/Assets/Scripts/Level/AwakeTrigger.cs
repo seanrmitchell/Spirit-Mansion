@@ -18,18 +18,6 @@ public class AwakeTrigger : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        
-        
-        
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-
-    }
-
     private void OnTriggerExit(Collider other)
     {
         player.GetComponent<PlayerAttack>().enabled = false;
